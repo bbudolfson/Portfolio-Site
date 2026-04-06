@@ -246,9 +246,13 @@ h4 {
 }
 
 .heroTitle {
-  color: var(--color-accent2);
+  /* Slightly softer than accent2 alone — still on-brand, reads lighter on the page */
+  color: color-mix(in srgb, var(--color-accent2) 86%, var(--neutral-50));
   grid-column: 1 / span 10;
   max-width: none;
+  /* Lightest real Cormorant weight (300 is bundled in layout.tsx) */
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.03em;
 }
 
 .profileGrid {
