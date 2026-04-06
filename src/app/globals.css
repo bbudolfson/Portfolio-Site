@@ -250,8 +250,8 @@ h4 {
   color: color-mix(in srgb, var(--color-accent2) 86%, var(--neutral-50));
   grid-column: 1 / span 10;
   max-width: none;
-  /* Lightest real Cormorant weight (300 is bundled in layout.tsx) */
-  font-weight: var(--font-weight-light);
+  /* Regular (400); one step up from light (300), both bundled in layout.tsx */
+  font-weight: var(--font-weight-regular);
   letter-spacing: 0.03em;
 }
 

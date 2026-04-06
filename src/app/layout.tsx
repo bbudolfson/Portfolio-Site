@@ -31,10 +31,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const appCssVars = {
-    ...cssVars,
-    "--app-font-heading": "\"Freight Display\", Georgia, serif",
-  } as React.CSSProperties;
+  const appCssVars = { ...cssVars } as React.CSSProperties;
 
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`} style={appCssVars}>
