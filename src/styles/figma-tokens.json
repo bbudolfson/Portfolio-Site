@@ -1,0 +1,102 @@
+{
+  "cssVars": {
+    "--red-50": "#f3dfdb",
+    "--red-100": "#f3dfdb",
+    "--red-200": "#e7c0b7",
+    "--red-300": "#dca092",
+    "--red-400": "#d0816e",
+    "--red-500": "#c4614a",
+    "--red-600": "#9d4e3b",
+    "--red-700": "#763a2c",
+    "--red-800": "#4e271e",
+    "--red-900": "#27130f",
+
+    "--neutral-50": "#fcfbfa",
+    "--neutral-100": "#f8f8f6",
+    "--neutral-200": "#f2f0ed",
+    "--neutral-300": "#ebe9e3",
+    "--neutral-400": "#e5e1da",
+    "--neutral-500": "#dedad1",
+    "--neutral-600": "#b2aea7",
+    "--neutral-700": "#85837d",
+    "--neutral-800": "#595754",
+    "--neutral-900": "#2c2c2a",
+
+    "--green-50": "#f2f6f6",
+    "--green-100": "#e5edec",
+    "--green-200": "#cadbd9",
+    "--green-300": "#b0c8c6",
+    "--green-400": "#95b6b3",
+    "--green-500": "#7ba4a0",
+    "--green-600": "#628380",
+    "--green-700": "#4a6260",
+    "--green-800": "#314240",
+    "--green-900": "#192120",
+
+    "--font-heading": "\"Cormorant Garamond\", Georgia, serif",
+    "--font-body": "\"Nunito Sans\", \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+
+    "--font-weight-light": "300",
+    "--font-weight-regular": "400",
+    "--font-weight-medium": "500",
+    "--font-weight-semi-bold": "600",
+    "--font-weight-bold": "700",
+
+    "--space-0": "0px",
+    "--space-25": "1px",
+    "--space-50": "2px",
+    "--space-100": "4px",
+    "--space-200": "8px",
+    "--space-300": "12px",
+    "--space-400": "16px",
+    "--space-500": "24px",
+    "--space-600": "28px",
+    "--space-700": "32px",
+    "--space-800": "40px",
+    "--space-900": "64px",
+
+    "--surface-page": "var(--neutral-50)",
+    "--surface-primary": "var(--neutral-300)",
+    "--surface-default": "var(--neutral-200)",
+    "--surface-accent": "var(--green-200)",
+    "--color-bg": "var(--surface-page)",
+    "--color-surface": "var(--surface-default)",
+    "--color-border": "var(--neutral-300)",
+    "--text-primary": "var(--neutral-900)",
+    "--text-secondary": "var(--neutral-700)",
+    "--link-default": "var(--text-primary)",
+    "--link-underline": "var(--text-primary)",
+    "--color-fg": "var(--text-primary)",
+    "--color-muted": "var(--text-secondary)",
+    "--color-accent": "var(--green-300)",
+    "--color-accent2": "var(--red-500)",
+
+    "--text-h1-size": "48px",
+    "--text-h1-line-height": "56px",
+
+    "--text-h2-size": "32px",
+    "--text-h2-line-height": "43px",
+
+    "--text-h3-size": "24px",
+    "--text-h3-line-height": "23px",
+
+    "--text-h4-size": "14px",
+    "--text-h4-line-height": "18px",
+    "--text-h4-font-weight": "var(--font-weight-semi-bold)",
+
+    "--text-paragraph-large-size": "18px",
+    "--text-paragraph-large-line-height": "28px",
+
+    "--text-paragraph-medium-size": "14px",
+    "--text-paragraph-medium-line-height": "24px",
+
+    "--text-label-size": "14px",
+    "--text-label-line-height": "20px",
+
+    "--radius-md": "14px",
+    "--radius-lg": "20px",
+    "--shadow-lg": "0 18px 46px rgba(44, 44, 42, 0.08)",
+    "--container": "1120px"
+  }
+}
+

@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "prebuild": "rm -rf out",
+    "dev": "STATIC_EXPORT=false WATCHPACK_POLLING=true next dev --webpack -p ${PORT:-3000}",
+    "dev:reset": "bash scripts/dev-reset.sh",
+    "preview": "STATIC_EXPORT=true next build && node scripts/serve-out.mjs",
+    "build": "STATIC_EXPORT=true next build",
+    "start": "STATIC_EXPORT=false next start -p ${PORT:-3000}",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "embla-carousel-react": "*",
+    "framer-motion": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-markdown": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "netlify-cli": "^24.3.0",
+    "typescript": "*"
+  }
+}

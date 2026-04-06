@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Build / debug
+*.tsbuildinfo
+next-env.d.ts
+
+# Env
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Local portable Node (optional)
+.tools/
+
+# npm cache in project
+.npm-cache/
+
+# Vercel
+.vercel

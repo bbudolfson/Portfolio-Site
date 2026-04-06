@@ -1,0 +1,42 @@
+What's left — do these on your Mac (in order)
+================================================
+
+1) Install Git (Apple Command Line Tools)
+   Terminal:
+     xcode-select --install
+   Accept the dialog and wait until it finishes.
+
+2) Create the GitHub repo (if you have not already)
+   https://github.com/new
+   Name: Portfolio-Site
+   Owner: bbudolfson
+   Leave it EMPTY (no README, no .gitignore) for the easiest first push.
+
+3) Set your name and email for commits (once per Mac):
+
+   git config --global user.name "Your Name"
+   git config --global user.email "you@example.com"
+
+4) From this project folder, run ONE of:
+
+   ./scripts/git-first-push.sh
+
+   OR paste the commands from scripts/git-first-push.sh by hand.
+
+5) When `git push` asks for credentials
+   GitHub no longer accepts account passwords for HTTPS.
+   Use a Personal Access Token (classic) as the password:
+     GitHub → Settings → Developer settings → Personal access tokens
+   Scopes: at least "repo".
+
+   OR switch to SSH (after adding an SSH key to GitHub):
+     git remote set-url origin git@github.com:bbudolfson/Portfolio-Site.git
+     git push -u origin main
+
+6) If push fails because the remote already has commits (e.g. README)
+     git pull origin main --rebase
+     git push -u origin main
+
+7) Netlify: connect the site to Git
+   app.netlify.com → Add site → Import from Git → GitHub → pick Portfolio-Site
+   Build settings are read from netlify.toml (npm run build, publish out).
