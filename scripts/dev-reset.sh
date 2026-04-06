@@ -8,6 +8,10 @@ set -u
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT" || exit 1
 
+if [[ -x "$ROOT/.tools/node/bin/node" ]]; then
+  export PATH="$ROOT/.tools/node/bin:$PATH"
+fi
+
 PORT="${PORT:-3000}"
 
 echo ""

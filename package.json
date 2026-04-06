@@ -3,11 +3,17 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=20 <21"
+  },
   "scripts": {
+    "setup": "npm install",
     "prebuild": "rm -rf out",
     "dev": "STATIC_EXPORT=false WATCHPACK_POLLING=true next dev --webpack -p ${PORT:-3000}",
+    "dev:local": "bash scripts/dev-with-tools.sh",
     "dev:reset": "bash scripts/dev-reset.sh",
     "preview": "STATIC_EXPORT=true next build && node scripts/serve-out.mjs",
+    "preview:local": "bash scripts/preview-with-tools.sh",
     "build": "STATIC_EXPORT=true next build",
     "start": "STATIC_EXPORT=false next start -p ${PORT:-3000}",
     "lint": "next lint"

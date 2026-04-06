@@ -1,0 +1,51 @@
+Local preview (before you push)
+================================
+
+Requirements: Node 20 (see .nvmrc). If you use nvm:  nvm use
+
+First time (or after pulling):
+  npm run setup
+  → same as: npm install
+
+Daily development (hot reload, like local editing):
+  npm run dev
+  → http://localhost:3000
+
+If Node is only in .tools/node (no nvm/Homebrew):
+  npm run dev:local
+
+Stuck port or Next dev lock:
+  npm run dev:reset
+
+Preview the same static site Netlify builds (slower, uses `out/`):
+  npm run preview
+  → http://localhost:3000  (or use PORT=3001 npm run preview)
+
+With bundled .tools Node only:
+  npm run preview:local
+
+If the browser shows nothing or "can't connect"
+---------------------------------------------
+
+1) The dev server must be RUNNING. In the project folder, run:
+     npm run dev
+   Leave that terminal open. Wait until you see:
+     ▲ Next.js …
+     - Local: http://localhost:3000
+     ✓ Ready …
+   If you close the terminal or press Ctrl+C, the site stops.
+
+2) Use the exact URL from that output. Default is:
+     http://localhost:3000
+   If port 3000 was busy, Next picks 3001 (or another port) — use what it prints.
+
+3) Use a normal browser (Safari, Chrome, Firefox). Cursor's Simple Browser
+   sometimes fails to load local dev servers; try an external browser.
+
+4) Try the "Network" URL Next prints (e.g. http://192.168.x.x:3000) on the same computer.
+
+5) Extensions that inject into pages (ad blockers, ColorZilla, etc.) can break
+   React in dev. Try a private/incognito window with extensions disabled.
+
+6) Not the same as dev: "npm run preview" builds first — wait for "Local: http://…"
+   from the static server before opening the tab.

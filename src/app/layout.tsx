@@ -38,7 +38,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`} style={appCssVars}>
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <SiteContact />
       </body>
