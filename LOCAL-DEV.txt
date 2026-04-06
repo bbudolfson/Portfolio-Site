@@ -3,11 +3,22 @@ Local preview (before you push)
 
 Requirements: Node 20 (see .nvmrc). If you use nvm:  nvm use
 
-First time (or after pulling):
+If `npm` is not found (e.g. in Cursor), use repo scripts (they use .tools/node when present):
+  ./up
+  or:  bash scripts/up.sh
+
+When `npm` is on PATH — fastest path after clone or when node_modules is missing:
+  npm run up
+  → http://localhost:3000
+
+Dev only (deps already installed), no npm on PATH:
+  ./dev
+
+First time only (install deps only):
   npm run setup
   → same as: npm install
 
-Daily development (hot reload, like local editing):
+Daily development when deps are already installed (hot reload):
   npm run dev
   → http://localhost:3000
 

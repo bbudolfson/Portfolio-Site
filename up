@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Install deps if needed, then dev — uses .tools/node when present (no global npm required).
+# Usage: ./up   or   bash up
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+exec bash "$ROOT/scripts/up.sh"

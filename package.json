@@ -7,6 +7,7 @@
     "node": ">=20 <21"
   },
   "scripts": {
+    "up": "bash scripts/up.sh",
     "setup": "npm install",
     "prebuild": "rm -rf out",
     "dev": "STATIC_EXPORT=false WATCHPACK_POLLING=true next dev --webpack -p ${PORT:-3000}",

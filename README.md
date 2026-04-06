@@ -6,12 +6,34 @@ Use **one** dev server and the URL it prints. Saving files should update the bro
 
 ### Day-to-day (recommended)
 
+**If `npm` is not on your PATH** (common in Cursor when Node only lives in this repo’s `.tools/node`), use the shell scripts — they wire up `.tools/node` automatically:
+
+```bash
+cd portfolio
+./up
+```
+
+**If `npm` works normally:**
+
+**First time or after a clean clone** (installs dependencies if needed, then starts dev):
+
+```bash
+cd portfolio
+npm run up
+```
+
+**When `node_modules` is already installed:**
+
 ```bash
 cd portfolio
 npm run dev
 ```
 
-Open **http://127.0.0.1:3000** (or the port shown in the terminal).
+Or without `npm`: `./dev`
+
+Open **http://127.0.0.1:3000** in **Safari, Chrome, or Firefox** (Cursor’s Simple Browser often fails to load local dev servers — use a normal browser).
+
+If you use **nvm**, run `nvm use` once in the repo (see `.nvmrc`) so you pick Node 20.
 
 ### If auto-refresh feels stuck or “another dev server is running”
 
@@ -20,6 +42,13 @@ Run this **once** — it frees port `3000`, removes Next’s dev lock, and start
 ```bash
 cd portfolio
 npm run dev:reset
+```
+
+Without `npm` on PATH:
+
+```bash
+cd portfolio
+./dev-reset
 ```
 
 Use a different port if needed:

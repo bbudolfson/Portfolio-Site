@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Start Next dev with project-local Node (.tools/node) when present — no global npm required.
+# Usage: ./dev   or   bash dev
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+if [[ -x "$ROOT/.tools/node/bin/node" ]]; then
+  export PATH="$ROOT/.tools/node/bin:$PATH"
+fi
+cd "$ROOT"
+if ! command -v npm >/dev/null 2>&1; then
+  echo "npm not found. Add Node 20 to PATH, or install portable Node at .tools/node (see LOCAL-DEV.txt)."
+  exit 1
+fi
+exec npm run dev
