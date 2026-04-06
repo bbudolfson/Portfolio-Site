@@ -9,7 +9,7 @@ import "./globals.css";
 
 const headingFont = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["300", "400", "500"],
   variable: "--app-font-heading",
   display: "swap",
 });

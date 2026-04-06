@@ -250,8 +250,8 @@ h4 {
   color: color-mix(in srgb, var(--color-accent2) 86%, var(--neutral-50));
   grid-column: 1 / span 10;
   max-width: none;
-  /* Regular (400); one step up from light (300), both bundled in layout.tsx */
-  font-weight: var(--font-weight-regular);
+  /* Medium (500); bundled in layout.tsx */
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.03em;
 }
 
