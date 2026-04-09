@@ -137,6 +137,17 @@ const projectTiles: ProjectTile[] = [
       "An AI-powered email tool built for freight forwarder operations teams, reducing the overhead of customer communications and eliminating the constant back-and-forth between email and logistics software.",
   },
   {
+    id: "logixboard-design-system",
+    href: null,
+    label: "Logixboard Design System",
+    pills: ["Design systems", "Design leadership"],
+    imageSrc: "/images/projects/logixboard-design-system.png?v=2",
+    imageAlt: "Logixboard Design System.",
+    colSpan: 12,
+    hoverBlurb:
+      "My role at Logixboard was to design, refine, and guide the functionality of the core product (the customer experience portal) while bringing a new product to market (shown later). I was brought on to be a champion for the design team and elevate the product consistency by refining the design system.",
+  },
+  {
     id: "logixboard-cx-analytics-vision",
     href: null,
     label: "Logixboard Customer Experience Analytics Design Vision",
