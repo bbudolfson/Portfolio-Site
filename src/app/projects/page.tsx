@@ -141,7 +141,7 @@ const projectTiles: ProjectTile[] = [
     href: null,
     label: "Logixboard Design System",
     pills: ["Design systems", "Design leadership"],
-    imageSrc: "/images/projects/logixboard-design-system.png?v=2",
+    imageSrc: "/images/projects/logixboard-design-system.png?v=3",
     imageAlt: "Logixboard Design System.",
     colSpan: 12,
     hoverBlurb:
@@ -260,7 +260,7 @@ const projectTiles: ProjectTile[] = [
       "User Research",
       "New Product Launch",
     ],
-    imageSrc: "/images/projects/general-motors.png?v=4",
+    imageSrc: "/images/projects/general-motors.png?v=5",
     imageAlt: "General Motors Augmented Reality Manual.",
     colSpan: 12,
     hoverBlurb:
