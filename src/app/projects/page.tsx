@@ -141,7 +141,7 @@ const projectTiles: ProjectTile[] = [
     href: null,
     label: "Logixboard Design System",
     pills: ["Design systems", "Design leadership"],
-    imageSrc: "/images/projects/logixboard-design-system.png?v=5",
+    imageSrc: "/images/projects/logixboard-design-system.png?v=8",
     imageAlt: "Logixboard Design System.",
     colSpan: 12,
     hoverBlurb:
