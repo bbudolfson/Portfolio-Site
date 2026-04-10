@@ -253,6 +253,8 @@ h4 {
   /* Medium (500); bundled in layout.tsx */
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.03em;
+  /* Tighter than global h1 (--text-h1-line-height) for multi-line hero */
+  line-height: 1.08;
 }
 
 .profileGrid {
@@ -1155,7 +1157,7 @@ h4.projectsQuadHeading {
     max-width: none;
     /* Scale down so multi-line titles fit comfortably on smaller screens */
     font-size: clamp(28px, 6vw, 40px);
-    line-height: 1.28;
+    line-height: 1.15;
   }
 
   .profileGrid {
