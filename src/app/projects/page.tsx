@@ -148,7 +148,7 @@ const projectTiles: ProjectTile[] = [
     imageAlt: "Logixboard Design System.",
     colSpan: 12,
     hoverBlurb:
-      "My role at Logixboard was to design, refine, and guide the functionality of the core product (the customer experience portal) while bringing a new product to market (shown later). I was brought on to be a champion for the design team and elevate the product consistency by refining the design system.",
+      "At Logixboard, I was brought in to champion the design team and elevate product consistency through a refined design system. Leveraging MUI as a foundation, I partnered with design and engineering to build a scalable system adopted across the entire product.",
   },
   {
     id: "logixboard-cx-analytics-vision",
