@@ -361,7 +361,7 @@ export default function ProjectsPage() {
           aria-label="View Logixboard case study (opens Figma deck in a new tab)"
         >
           <img
-            src="/images/projects/logixboard-case-study-banner.png?v=2"
+            src="/images/projects/logixboard-case-study-banner.png?v=3"
             alt="Logixboard case study banner: logistics portal mockups and View case study call to action."
             width={2498}
             height={1188}

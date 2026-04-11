@@ -663,7 +663,7 @@ h2.capabilityTitle {
   max-width: 36ch;
   font-family: var(--app-font-body), var(--font-body);
   font-size: var(--text-paragraph-medium-size);
-  line-height: var(--text-paragraph-medium-line-height);
+  line-height: 1.4;
   font-weight: var(--font-weight-regular);
   color: rgba(255, 255, 255, 0.94);
   text-align: left;
