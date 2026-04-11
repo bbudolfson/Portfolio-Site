@@ -462,6 +462,39 @@ h2.capabilityTitle {
   height: clamp(16px, 1.45vw, 24px);
 }
 
+.projectsCaseStudyBanner {
+  margin: 0 0 clamp(28px, 4vw, 48px);
+  width: 100%;
+  min-width: 0;
+}
+
+.projectsCaseStudyBannerLink {
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+  line-height: 0;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 12px 40px rgba(44, 44, 42, 0.1);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.projectsCaseStudyBannerLink:hover {
+  box-shadow: 0 16px 48px rgba(44, 44, 42, 0.14);
+}
+
+.projectsCaseStudyBannerLink:focus-visible {
+  outline: 2px solid var(--color-accent2);
+  outline-offset: 4px;
+}
+
+.projectsCaseStudyBannerImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
 .projectsIndexHeading {
   margin: 0 0 var(--space-300);
   font-family: var(--app-font-heading), var(--font-heading);
