@@ -1139,7 +1139,8 @@ h2.capabilityTitle {
   }
 
   .projectsQuadCol--continued {
-    padding-top: calc(var(--text-h4-line-height) + var(--space-200));
+    /* Align with adjacent column: company heading (14px / 1.4) + margin below */
+    padding-top: calc(var(--text-paragraph-medium-size) * 1.4 + var(--space-200));
   }
 }
 
@@ -1230,9 +1231,14 @@ h4.projectsHighlightsTitle {
   min-width: 0;
 }
 
+/* Match project tile hover: Overview line + body copy (Raleway on light surface) */
 h4.projectsQuadHeading {
   margin: 0 0 var(--space-200);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--app-font-body), var(--font-body);
+  font-size: var(--text-paragraph-medium-size);
+  line-height: 1.4;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--text-primary);
 }
 
 .projectsQuadList {
@@ -1247,9 +1253,9 @@ h4.projectsQuadHeading {
 .projectsQuadList li {
   margin: 0;
   font-family: var(--app-font-body), var(--font-body);
-  font-weight: var(--font-weight-semi-bold);
-  font-size: var(--text-label-size);
-  line-height: var(--text-label-line-height);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text-paragraph-medium-size);
+  line-height: 1.4;
   color: var(--text-secondary);
 }
 
