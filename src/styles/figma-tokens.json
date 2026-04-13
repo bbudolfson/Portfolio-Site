@@ -33,8 +33,9 @@
     "--green-800": "#314240",
     "--green-900": "#192120",
 
-    "--font-heading": "\"Cormorant Garamond\", Georgia, serif",
-    "--font-body": "\"Nunito Sans\", \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+    "--font-heading": "\"Playfair Display\", Georgia, serif",
+    "--font-heading-text": "\"Playfair Display\", Georgia, serif",
+    "--font-body": "\"Raleway\", \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
 
     "--font-weight-light": "300",
     "--font-weight-regular": "400",
@@ -71,17 +72,17 @@
     "--color-accent": "var(--green-300)",
     "--color-accent2": "var(--red-500)",
 
-    "--text-h1-size": "48px",
-    "--text-h1-line-height": "56px",
+    "--text-h1-size": "40px",
+    "--text-h1-line-height": "48px",
 
-    "--text-h2-size": "32px",
-    "--text-h2-line-height": "43px",
+    "--text-h2-size": "28px",
+    "--text-h2-line-height": "36px",
 
-    "--text-h3-size": "24px",
-    "--text-h3-line-height": "23px",
+    "--text-h3-size": "22px",
+    "--text-h3-line-height": "28px",
 
-    "--text-h4-size": "14px",
-    "--text-h4-line-height": "18px",
+    "--text-h4-size": "13px",
+    "--text-h4-line-height": "17px",
     "--text-h4-font-weight": "var(--font-weight-semi-bold)",
 
     "--text-paragraph-large-size": "18px",

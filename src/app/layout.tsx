@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import React from "react";
-import { Cormorant_Garamond, Nunito_Sans } from "next/font/google";
+import { Playfair_Display, Raleway } from "next/font/google";
 
 import { SiteContact } from "../components/SiteContact";
 import { cssVars } from "../styles/tokens";
 
 import "./globals.css";
 
-const headingFont = Cormorant_Garamond({
+/** Display + “text” serif headers both use Playfair Display (single bundle). */
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500", "600", "700"],
+  style: "normal",
   variable: "--app-font-heading",
   display: "swap",
 });
 
-const bodyFont = Nunito_Sans({
+const bodyFont = Raleway({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--app-font-body",
   display: "swap",
 });
@@ -31,10 +33,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const appCssVars = { ...cssVars } as React.CSSProperties;
+  const appCssVars = {
+    ...cssVars,
+    "--app-font-heading-text": "var(--app-font-heading)",
+  } as React.CSSProperties;
 
   return (
-    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`} style={appCssVars}>
+    <html lang="en" className={`${playfairDisplay.variable} ${bodyFont.variable}`} style={appCssVars}>
       <body suppressHydrationWarning>
         {children}
         <SiteContact />

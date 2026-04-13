@@ -201,7 +201,7 @@ export default function HomeClient() {
           box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.15);
         }
         .h1 {
-          font-size: clamp(36px, 5vw, 56px);
+          font-size: clamp(30px, 4.2vw, 48px);
           line-height: 1.03;
           margin: 0 0 14px;
           letter-spacing: -0.02em;
@@ -279,7 +279,7 @@ export default function HomeClient() {
           padding: 48px 0;
         }
         .h2 {
-          font-size: 28px;
+          font-size: 24px;
           line-height: 1.2;
           margin: 0 0 10px;
           letter-spacing: -0.01em;
