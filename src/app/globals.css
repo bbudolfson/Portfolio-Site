@@ -856,7 +856,7 @@ h2.capabilityTitle {
   font-family: var(--app-font-body), var(--font-body);
   font-size: var(--text-label-size);
   line-height: var(--text-label-line-height);
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-light);
   color: var(--text-primary);
 }
 

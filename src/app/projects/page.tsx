@@ -2,9 +2,6 @@ import { SiteHeader } from "../../components/SiteHeader";
 
 import { ProjectsIndexGrid } from "./ProjectsIndexGrid";
 
-const logixboardCaseStudyDeckUrl =
-  "https://www.figma.com/deck/wWZslVk5spQ6jFzsxUTet4/Clockwork-Case-Study?node-id=1-82&viewport=-16189%2C-745%2C0.53&t=XwtkhXHHlwRUHwtA-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1";
-
 type WorkSampleColumn = {
   id: string;
   title: string | null;
@@ -87,26 +84,6 @@ export default function ProjectsPage() {
   return (
     <main className="container pageShell">
       <SiteHeader active="projects" />
-
-      <section className="projectsCaseStudyBanner" aria-label="Logixboard case study">
-        <a
-          href={logixboardCaseStudyDeckUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="projectsCaseStudyBannerLink"
-          aria-label="View Logixboard case study (opens Figma deck in a new tab)"
-        >
-          <img
-            src="/images/projects/logixboard-case-study-banner.png?v=5"
-            alt="Logixboard case study banner: logistics portal mockups and View case study call to action."
-            width={2498}
-            height={1188}
-            className="projectsCaseStudyBannerImage"
-            decoding="async"
-            fetchPriority="high"
-          />
-        </a>
-      </section>
 
       <h1 className="projectsIndexHeading">Sample Project Work</h1>
 
