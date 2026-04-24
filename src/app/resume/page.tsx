@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "Résumé for Brent Budolfson.",
 };
 
-const resumePath = "/Brent_Budolfson_Resume.pdf";
+// Bump `v` when you replace the PDF in public/ (avoids stale cached file for visitors).
+const resumePath = "/Brent_Budolfson_Resume.pdf?v=2026-04-24";
 
 export default function ResumePage() {
   return (
