@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import React from "react";
-import { Playfair_Display, Raleway } from "next/font/google";
+import { EB_Garamond, Lato } from "next/font/google";
 
 import { SiteContact } from "../components/SiteContact";
 import { cssVars } from "../styles/tokens";
 
 import "./globals.css";
 
-/** Display + “text” serif headers both use Playfair Display (single bundle). */
-const playfairDisplay = Playfair_Display({
+/** Display + serif subheads: EB Garamond (closest to “condensed” on Google Fonts is the standard family). */
+const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: "normal",
@@ -16,9 +16,10 @@ const playfairDisplay = Playfair_Display({
   display: "swap",
 });
 
-const bodyFont = Raleway({
+const bodyFont = Lato({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["100", "300", "400", "700", "900"],
+  style: "normal",
   variable: "--app-font-body",
   display: "swap",
 });
@@ -39,7 +40,7 @@ export default function RootLayout({
   } as React.CSSProperties;
 
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${bodyFont.variable}`} style={appCssVars}>
+    <html lang="en" className={`${ebGaramond.variable} ${bodyFont.variable}`} style={appCssVars}>
       <body suppressHydrationWarning>
         {children}
         <SiteContact />

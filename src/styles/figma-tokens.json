@@ -33,15 +33,18 @@
     "--green-800": "#314240",
     "--green-900": "#192120",
 
-    "--font-heading": "\"Playfair Display\", Georgia, serif",
-    "--font-heading-text": "\"Playfair Display\", Georgia, serif",
-    "--font-body": "\"Raleway\", \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+    "--font-heading": "\"EB Garamond\", Georgia, serif",
+    "--font-heading-text": "\"EB Garamond\", Georgia, serif",
+    "--font-body": "\"Lato\", \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
 
     "--font-weight-light": "300",
     "--font-weight-regular": "400",
     "--font-weight-medium": "500",
     "--font-weight-semi-bold": "600",
     "--font-weight-bold": "700",
+
+    "--font-body-weight-medium": "400",
+    "--font-body-weight-semi-bold": "700",
 
     "--space-0": "0px",
     "--space-25": "1px",
@@ -86,10 +89,10 @@
     "--text-h4-font-weight": "var(--font-weight-semi-bold)",
 
     "--text-paragraph-large-size": "18px",
-    "--text-paragraph-large-line-height": "28px",
+    "--text-paragraph-large-line-height": "26px",
 
     "--text-paragraph-medium-size": "14px",
-    "--text-paragraph-medium-line-height": "24px",
+    "--text-paragraph-medium-line-height": "22px",
 
     "--text-label-size": "14px",
     "--text-label-line-height": "20px",

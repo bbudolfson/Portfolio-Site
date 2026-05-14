@@ -208,7 +208,7 @@ export default function HomeClient() {
         }
         .lead {
           font-size: 18px;
-          line-height: 1.6;
+          line-height: 1.52;
           margin: 0 0 26px;
           color: var(--color-muted);
         }
@@ -225,7 +225,7 @@ export default function HomeClient() {
           color: inherit;
           padding: 10px 14px;
           border-radius: 14px;
-          font-weight: 600;
+          font-weight: var(--font-body-weight-semi-bold);
           cursor: pointer;
           transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
         }
@@ -243,7 +243,7 @@ export default function HomeClient() {
         }
         .heroPanelTitle {
           font-family: var(--app-font-body), var(--font-body);
-          font-weight: var(--font-weight-semi-bold);
+          font-weight: var(--font-body-weight-semi-bold);
           font-size: var(--text-h3-size);
           line-height: var(--text-h3-line-height);
           color: inherit;
@@ -286,7 +286,7 @@ export default function HomeClient() {
         }
         .h3 {
           font-family: var(--app-font-body), var(--font-body);
-          font-weight: var(--font-weight-semi-bold);
+          font-weight: var(--font-body-weight-semi-bold);
           font-size: var(--text-h3-size);
           line-height: var(--text-h3-line-height);
           color: inherit;
@@ -298,7 +298,7 @@ export default function HomeClient() {
         }
         .p {
           margin: 0;
-          line-height: 1.6;
+          line-height: 1.52;
           color: var(--color-muted);
         }
         .grid3 {
@@ -428,7 +428,7 @@ export default function HomeClient() {
         }
         .slideHint {
           color: var(--color-muted);
-          line-height: 1.6;
+          line-height: 1.52;
         }
         .carouselDots {
           display: flex;
@@ -494,7 +494,7 @@ export default function HomeClient() {
                 <li className="heroListItem">
                   <span className="heroListIcon">✓</span>
                   <div>
-                    <div style={{ fontWeight: 800, marginBottom: 4 }}>Static-friendly</div>
+                    <div style={{ fontWeight: 900, marginBottom: 4 }}>Static-friendly</div>
                     <div className="p">Deploys to Netlify via `out/` with no git required.</div>
                   </div>
                 </li>
@@ -503,7 +503,7 @@ export default function HomeClient() {
                     ✓
                   </span>
                   <div>
-                    <div style={{ fontWeight: 800, marginBottom: 4 }}>Tokenized styling</div>
+                    <div style={{ fontWeight: 900, marginBottom: 4 }}>Tokenized styling</div>
                     <div className="p">Swap colors/radii/shadows by editing `figma-tokens.json`.</div>
                   </div>
                 </li>
@@ -512,7 +512,7 @@ export default function HomeClient() {
                     ✓
                   </span>
                   <div>
-                    <div style={{ fontWeight: 800, marginBottom: 4 }}>Media carousel</div>
+                    <div style={{ fontWeight: 900, marginBottom: 4 }}>Media carousel</div>
                     <div className="p">Placeholder slides ready for your images/videos.</div>
                   </div>
                 </li>
@@ -536,7 +536,7 @@ export default function HomeClient() {
             borderTop: "1px solid rgba(255,255,255,0.09)",
             paddingTop: 22,
             color: "var(--color-muted)",
-            lineHeight: 1.6,
+            lineHeight: 1.52,
           }}
         >
           Built for interview week. Replace placeholders with your real work and deploy to Netlify.
