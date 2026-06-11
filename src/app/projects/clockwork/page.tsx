@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { ProjectImage } from "../../../components/ProjectImage";
 import { SiteHeader } from "../../../components/SiteHeader";
 
 export const metadata: Metadata = {
@@ -32,14 +33,14 @@ export default function ClockworkProjectPage() {
       <section className="projectsPage">
         <figure className="projectsHeroFigure">
           <div className="projectsHeroFrame">
-            <img
-              src="/images/projects/clockwork-shipment-ui.png?v=2"
+            <ProjectImage
+              src="/images/projects/clockwork-shipment-ui.png?v=11"
               width={329}
               height={930}
               alt="Clockwork shipment add-in: in-transit shipment overview, details, route timeline, and collapsible sections."
               className="projectsHeroImage"
-              decoding="async"
               loading="eager"
+              fetchPriority="high"
             />
           </div>
         </figure>

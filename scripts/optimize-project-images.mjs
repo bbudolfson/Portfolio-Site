@@ -3,7 +3,7 @@
  * Generates WebP derivatives for project PNG/JPEG assets in public/images/projects/.
  * Run after adding or replacing source images: npm run optimize-images
  */
-import { readdir } from "node:fs/promises";
+import { readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
@@ -31,8 +31,8 @@ async function optimizeFile(fileName) {
 
   await pipeline.webp({ quality: WEBP_QUALITY, effort: 4 }).toFile(outputPath);
 
-  const { size: inputBytes } = await import("node:fs/promises").then((fs) => fs.stat(inputPath));
-  const { size: outputBytes } = await import("node:fs/promises").then((fs) => fs.stat(outputPath));
+  const { size: inputBytes } = await stat(inputPath);
+  const { size: outputBytes } = await stat(outputPath);
 
   return {
     fileName,

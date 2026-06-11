@@ -4,15 +4,22 @@ import { useCallback, useEffect, useId, useRef, useState, type RefObject } from 
 import { createPortal } from "react-dom";
 import Link from "next/link";
 
+import { ProjectImage } from "../../components/ProjectImage";
 import { projectTileHoverPlaceholder, projectTiles, type ProjectTile } from "./projectTiles";
 
-function TileFigure({ tile }: { tile: ProjectTile }) {
+function TileFigure({ tile, priority }: { tile: ProjectTile; priority?: boolean }) {
   const blurb = tile.hoverBlurb ?? projectTileHoverPlaceholder;
   return (
     <div
       className={`projectsTileFigure projectsTileFigure--image${tile.imageBleedBottom ? " projectsTileFigure--imageBleedBottom" : ""}`}
     >
-      <img src={tile.imageSrc} alt={tile.imageAlt} className="projectsTileImage" loading="lazy" />
+      <ProjectImage
+        src={tile.imageSrc}
+        alt={tile.imageAlt}
+        className="projectsTileImage"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : undefined}
+      />
       <div className="projectsTileOverlay projectsTileOverlay--desktopHover" aria-hidden="true">
         <h3 className="projectsTileOverlayHeading">Overview</h3>
         <p className="projectsTileOverlayText">{blurb}</p>
@@ -120,7 +127,7 @@ export function ProjectsIndexGrid() {
   return (
     <>
       <ul className="projectsIndexGrid">
-        {projectTiles.map((tile) => {
+        {projectTiles.map((tile, index) => {
           const spanClass =
             tile.colSpan === 12
               ? " projectsIndexTile--span12"
@@ -134,12 +141,12 @@ export function ProjectsIndexGrid() {
             <>
               {tile.href ? (
                 <Link href={tile.href} className="projectsTileLink">
-                  <TileFigure tile={tile} />
+                  <TileFigure tile={tile} priority={index === 0} />
                   {label}
                 </Link>
               ) : (
                 <div className="projectsTileStatic">
-                  <TileFigure tile={tile} />
+                  <TileFigure tile={tile} priority={index === 0} />
                   {label}
                 </div>
               )}

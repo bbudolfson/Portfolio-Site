@@ -628,6 +628,11 @@ h2.capabilityTitle {
   padding: clamp(12px, 2vw, 20px);
 }
 
+.projectImagePicture {
+  display: block;
+  width: 100%;
+}
+
 .projectsTileFigure--imageBleedBottom .projectsTileImage {
   width: auto;
   flex: 0 0 auto;
