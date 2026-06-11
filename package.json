@@ -9,7 +9,8 @@
   "scripts": {
     "up": "bash scripts/up.sh",
     "setup": "npm install",
-    "prebuild": "rm -rf out",
+    "optimize-images": "node scripts/optimize-project-images.mjs",
+    "prebuild": "rm -rf out && npm run optimize-images",
     "dev": "STATIC_EXPORT=false WATCHPACK_POLLING=true next dev --webpack -p ${PORT:-3000}",
     "dev:local": "bash scripts/dev-with-tools.sh",
     "dev:reset": "bash scripts/dev-reset.sh",
@@ -32,6 +33,7 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "netlify-cli": "^24.3.0",
+    "sharp": "^0.35.1",
     "typescript": "*"
   }
 }
