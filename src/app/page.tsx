@@ -80,6 +80,10 @@ export default function Page() {
               className="profileImage"
             />
           </figure>
+          <div className="profileCertifications">
+            <p className="profileCertificationsLine">NN UX Masters</p>
+            <p className="profileCertificationsLine">Generative AI for UX</p>
+          </div>
         </div>
 
         <div className="capabilitiesColumn">

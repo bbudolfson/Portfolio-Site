@@ -318,6 +318,22 @@ h4 {
   display: block;
 }
 
+.profileCertifications {
+  display: grid;
+  gap: var(--space-100);
+  width: 100%;
+  text-align: center;
+}
+
+.profileCertificationsLine {
+  margin: 0;
+  font-family: var(--app-font-body), var(--font-body);
+  font-size: var(--text-label-size);
+  line-height: var(--text-label-line-height);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary);
+}
+
 .capabilitiesColumn {
   /* Image uses cols 1–2; gutter; Research / Craft / etc. in right 6 cols */
   grid-column: 7 / span 6;
