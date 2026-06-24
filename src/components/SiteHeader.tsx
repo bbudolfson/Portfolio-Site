@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const linkedInUrl = "https://www.linkedin.com/in/brentbudolfson/";
 
-type ActiveNav = "profile" | "projects" | "resume";
+type ActiveNav = "profile" | "case-study" | "projects" | "resume";
 
 function LinkedInIcon() {
   return (
@@ -33,6 +33,12 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
             <Link className={active === "profile" ? "topNavLink active" : "topNavLink"} href="/">
               Profile
             </Link>
+            <Link
+              className={active === "case-study" ? "topNavLink active" : "topNavLink"}
+              href="/case-study"
+            >
+              Case Study
+            </Link>
             <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
               Projects
             </Link>
@@ -45,6 +51,12 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
             <nav className="topNavMobileLinks" aria-label="Primary mobile">
               <Link className={active === "profile" ? "topNavLink active" : "topNavLink"} href="/">
                 Profile
+              </Link>
+              <Link
+                className={active === "case-study" ? "topNavLink active" : "topNavLink"}
+                href="/case-study"
+              >
+                Case Study
               </Link>
               <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
                 Projects

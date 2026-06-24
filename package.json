@@ -10,7 +10,8 @@
     "up": "bash scripts/up.sh",
     "setup": "npm install",
     "optimize-images": "node scripts/optimize-project-images.mjs",
-    "prebuild": "rm -rf out && npm run optimize-images",
+    "optimize-case-study": "node scripts/optimize-case-study-pdf.mjs",
+    "prebuild": "rm -rf out && npm run optimize-images && npm run optimize-case-study",
     "dev": "STATIC_EXPORT=false WATCHPACK_POLLING=true next dev --webpack -p ${PORT:-3000}",
     "dev:local": "bash scripts/dev-with-tools.sh",
     "dev:reset": "bash scripts/dev-reset.sh",
@@ -33,6 +34,7 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "netlify-cli": "^24.3.0",
+    "pdf-to-img": "^6.2.0",
     "sharp": "^0.35.1",
     "typescript": "*"
   }

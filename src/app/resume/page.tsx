@@ -16,6 +16,8 @@ export default function ResumePage() {
     <main className="container resumePageShell">
       <SiteHeader active="resume" />
 
+      <h1 className="projectsIndexHeading">Résumé</h1>
+
       <div className="resumePageToolbar">
         <Link href={resumePath} download className="resumeDownloadLink">
           Download PDF

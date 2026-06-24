@@ -1,0 +1,366 @@
+{
+  "id": "principal",
+  "title": "Logixboard Case Study",
+  "description": "A deep dive into the design lifecycle, 0-1 products, and design systems for enterprise SaaS.",
+  "slideCount": 89,
+  "slides": [
+    {
+      "src": "/case-studies/principal/slide-01.webp",
+      "alt": "Logixboard Case Study — slide 1"
+    },
+    {
+      "src": "/case-studies/principal/slide-02.webp",
+      "alt": "Logixboard Case Study — slide 2"
+    },
+    {
+      "src": "/case-studies/principal/slide-03.webp",
+      "alt": "Logixboard Case Study — slide 3"
+    },
+    {
+      "src": "/case-studies/principal/slide-04.webp",
+      "alt": "Logixboard Case Study — slide 4"
+    },
+    {
+      "src": "/case-studies/principal/slide-05.webp",
+      "alt": "Logixboard Case Study — slide 5"
+    },
+    {
+      "src": "/case-studies/principal/slide-06.webp",
+      "alt": "Logixboard Case Study — slide 6"
+    },
+    {
+      "src": "/case-studies/principal/slide-07.webp",
+      "alt": "Logixboard Case Study — slide 7"
+    },
+    {
+      "src": "/case-studies/principal/slide-08.webp",
+      "alt": "Logixboard Case Study — slide 8"
+    },
+    {
+      "src": "/case-studies/principal/slide-09.webp",
+      "alt": "Logixboard Case Study — slide 9"
+    },
+    {
+      "src": "/case-studies/principal/slide-10.webp",
+      "alt": "Logixboard Case Study — slide 10"
+    },
+    {
+      "src": "/case-studies/principal/slide-11.webp",
+      "alt": "Logixboard Case Study — slide 11"
+    },
+    {
+      "src": "/case-studies/principal/slide-12.webp",
+      "alt": "Logixboard Case Study — slide 12"
+    },
+    {
+      "src": "/case-studies/principal/slide-13.webp",
+      "alt": "Logixboard Case Study — slide 13"
+    },
+    {
+      "src": "/case-studies/principal/slide-14.webp",
+      "alt": "Logixboard Case Study — slide 14"
+    },
+    {
+      "src": "/case-studies/principal/slide-15.webp",
+      "alt": "Logixboard Case Study — slide 15"
+    },
+    {
+      "src": "/case-studies/principal/slide-16.webp",
+      "alt": "Logixboard Case Study — slide 16"
+    },
+    {
+      "src": "/case-studies/principal/slide-17.webp",
+      "alt": "Logixboard Case Study — slide 17"
+    },
+    {
+      "src": "/case-studies/principal/slide-18.webp",
+      "alt": "Logixboard Case Study — slide 18"
+    },
+    {
+      "src": "/case-studies/principal/slide-19.webp",
+      "alt": "Logixboard Case Study — slide 19"
+    },
+    {
+      "src": "/case-studies/principal/slide-20.webp",
+      "alt": "Logixboard Case Study — slide 20"
+    },
+    {
+      "src": "/case-studies/principal/slide-21.webp",
+      "alt": "Logixboard Case Study — slide 21"
+    },
+    {
+      "src": "/case-studies/principal/slide-22.webp",
+      "alt": "Logixboard Case Study — slide 22"
+    },
+    {
+      "src": "/case-studies/principal/slide-23.webp",
+      "alt": "Logixboard Case Study — slide 23"
+    },
+    {
+      "src": "/case-studies/principal/slide-24.webp",
+      "alt": "Logixboard Case Study — slide 24"
+    },
+    {
+      "src": "/case-studies/principal/slide-25.webp",
+      "alt": "Logixboard Case Study — slide 25"
+    },
+    {
+      "src": "/case-studies/principal/slide-26.webp",
+      "alt": "Logixboard Case Study — slide 26"
+    },
+    {
+      "src": "/case-studies/principal/slide-27.webp",
+      "alt": "Logixboard Case Study — slide 27"
+    },
+    {
+      "src": "/case-studies/principal/slide-28.webp",
+      "alt": "Logixboard Case Study — slide 28"
+    },
+    {
+      "src": "/case-studies/principal/slide-29.webp",
+      "alt": "Logixboard Case Study — slide 29"
+    },
+    {
+      "src": "/case-studies/principal/slide-30.webp",
+      "alt": "Logixboard Case Study — slide 30"
+    },
+    {
+      "src": "/case-studies/principal/slide-31.webp",
+      "alt": "Logixboard Case Study — slide 31"
+    },
+    {
+      "src": "/case-studies/principal/slide-32.webp",
+      "alt": "Logixboard Case Study — slide 32"
+    },
+    {
+      "src": "/case-studies/principal/slide-33.webp",
+      "alt": "Logixboard Case Study — slide 33"
+    },
+    {
+      "src": "/case-studies/principal/slide-34.webp",
+      "alt": "Logixboard Case Study — slide 34"
+    },
+    {
+      "src": "/case-studies/principal/slide-35.webp",
+      "alt": "Logixboard Case Study — slide 35"
+    },
+    {
+      "src": "/case-studies/principal/slide-36.webp",
+      "alt": "Logixboard Case Study — slide 36"
+    },
+    {
+      "src": "/case-studies/principal/slide-37.webp",
+      "alt": "Logixboard Case Study — slide 37"
+    },
+    {
+      "src": "/case-studies/principal/slide-38.webp",
+      "alt": "Logixboard Case Study — slide 38"
+    },
+    {
+      "src": "/case-studies/principal/slide-39.webp",
+      "alt": "Logixboard Case Study — slide 39"
+    },
+    {
+      "src": "/case-studies/principal/slide-40.webp",
+      "alt": "Logixboard Case Study — slide 40"
+    },
+    {
+      "src": "/case-studies/principal/slide-41.webp",
+      "alt": "Logixboard Case Study — slide 41"
+    },
+    {
+      "src": "/case-studies/principal/slide-42.webp",
+      "alt": "Logixboard Case Study — slide 42"
+    },
+    {
+      "src": "/case-studies/principal/slide-43.webp",
+      "alt": "Logixboard Case Study — slide 43"
+    },
+    {
+      "src": "/case-studies/principal/slide-44.webp",
+      "alt": "Logixboard Case Study — slide 44"
+    },
+    {
+      "src": "/case-studies/principal/slide-45.webp",
+      "alt": "Logixboard Case Study — slide 45"
+    },
+    {
+      "src": "/case-studies/principal/slide-46.webp",
+      "alt": "Logixboard Case Study — slide 46"
+    },
+    {
+      "src": "/case-studies/principal/slide-47.webp",
+      "alt": "Logixboard Case Study — slide 47"
+    },
+    {
+      "src": "/case-studies/principal/slide-48.webp",
+      "alt": "Logixboard Case Study — slide 48"
+    },
+    {
+      "src": "/case-studies/principal/slide-49.webp",
+      "alt": "Logixboard Case Study — slide 49"
+    },
+    {
+      "src": "/case-studies/principal/slide-50.webp",
+      "alt": "Logixboard Case Study — slide 50"
+    },
+    {
+      "src": "/case-studies/principal/slide-51.webp",
+      "alt": "Logixboard Case Study — slide 51"
+    },
+    {
+      "src": "/case-studies/principal/slide-52.webp",
+      "alt": "Logixboard Case Study — slide 52"
+    },
+    {
+      "src": "/case-studies/principal/slide-53.webp",
+      "alt": "Logixboard Case Study — slide 53"
+    },
+    {
+      "src": "/case-studies/principal/slide-54.webp",
+      "alt": "Logixboard Case Study — slide 54"
+    },
+    {
+      "src": "/case-studies/principal/slide-55.webp",
+      "alt": "Logixboard Case Study — slide 55"
+    },
+    {
+      "src": "/case-studies/principal/slide-56.webp",
+      "alt": "Logixboard Case Study — slide 56"
+    },
+    {
+      "src": "/case-studies/principal/slide-57.webp",
+      "alt": "Logixboard Case Study — slide 57"
+    },
+    {
+      "src": "/case-studies/principal/slide-58.webp",
+      "alt": "Logixboard Case Study — slide 58"
+    },
+    {
+      "src": "/case-studies/principal/slide-59.webp",
+      "alt": "Logixboard Case Study — slide 59"
+    },
+    {
+      "src": "/case-studies/principal/slide-60.webp",
+      "alt": "Logixboard Case Study — slide 60"
+    },
+    {
+      "src": "/case-studies/principal/slide-61.webp",
+      "alt": "Logixboard Case Study — slide 61"
+    },
+    {
+      "src": "/case-studies/principal/slide-62.webp",
+      "alt": "Logixboard Case Study — slide 62"
+    },
+    {
+      "src": "/case-studies/principal/slide-63.webp",
+      "alt": "Logixboard Case Study — slide 63"
+    },
+    {
+      "src": "/case-studies/principal/slide-64.webp",
+      "alt": "Logixboard Case Study — slide 64"
+    },
+    {
+      "src": "/case-studies/principal/slide-65.webp",
+      "alt": "Logixboard Case Study — slide 65"
+    },
+    {
+      "src": "/case-studies/principal/slide-66.webp",
+      "alt": "Logixboard Case Study — slide 66"
+    },
+    {
+      "src": "/case-studies/principal/slide-67.webp",
+      "alt": "Logixboard Case Study — slide 67"
+    },
+    {
+      "src": "/case-studies/principal/slide-68.webp",
+      "alt": "Logixboard Case Study — slide 68"
+    },
+    {
+      "src": "/case-studies/principal/slide-69.webp",
+      "alt": "Logixboard Case Study — slide 69"
+    },
+    {
+      "src": "/case-studies/principal/slide-70.webp",
+      "alt": "Logixboard Case Study — slide 70"
+    },
+    {
+      "src": "/case-studies/principal/slide-71.webp",
+      "alt": "Logixboard Case Study — slide 71"
+    },
+    {
+      "src": "/case-studies/principal/slide-72.webp",
+      "alt": "Logixboard Case Study — slide 72"
+    },
+    {
+      "src": "/case-studies/principal/slide-73.webp",
+      "alt": "Logixboard Case Study — slide 73"
+    },
+    {
+      "src": "/case-studies/principal/slide-74.webp",
+      "alt": "Logixboard Case Study — slide 74"
+    },
+    {
+      "src": "/case-studies/principal/slide-75.webp",
+      "alt": "Logixboard Case Study — slide 75"
+    },
+    {
+      "src": "/case-studies/principal/slide-76.webp",
+      "alt": "Logixboard Case Study — slide 76"
+    },
+    {
+      "src": "/case-studies/principal/slide-77.webp",
+      "alt": "Logixboard Case Study — slide 77"
+    },
+    {
+      "src": "/case-studies/principal/slide-78.webp",
+      "alt": "Logixboard Case Study — slide 78"
+    },
+    {
+      "src": "/case-studies/principal/slide-79.webp",
+      "alt": "Logixboard Case Study — slide 79"
+    },
+    {
+      "src": "/case-studies/principal/slide-80.webp",
+      "alt": "Logixboard Case Study — slide 80"
+    },
+    {
+      "src": "/case-studies/principal/slide-81.webp",
+      "alt": "Logixboard Case Study — slide 81"
+    },
+    {
+      "src": "/case-studies/principal/slide-82.webp",
+      "alt": "Logixboard Case Study — slide 82"
+    },
+    {
+      "src": "/case-studies/principal/slide-83.webp",
+      "alt": "Logixboard Case Study — slide 83"
+    },
+    {
+      "src": "/case-studies/principal/slide-84.webp",
+      "alt": "Logixboard Case Study — slide 84"
+    },
+    {
+      "src": "/case-studies/principal/slide-85.webp",
+      "alt": "Logixboard Case Study — slide 85"
+    },
+    {
+      "src": "/case-studies/principal/slide-86.webp",
+      "alt": "Logixboard Case Study — slide 86"
+    },
+    {
+      "src": "/case-studies/principal/slide-87.webp",
+      "alt": "Logixboard Case Study — slide 87"
+    },
+    {
+      "src": "/case-studies/principal/slide-88.webp",
+      "alt": "Logixboard Case Study — slide 88"
+    },
+    {
+      "src": "/case-studies/principal/slide-89.webp",
+      "alt": "Logixboard Case Study — slide 89"
+    }
+  ],
+  "pdfDownload": "/case-studies/source/Brent_Budolfson_Case_Study_Portfolio.pdf",
+  "generatedAt": "2026-06-24T23:25:54.402Z"
+}

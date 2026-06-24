@@ -1,4 +1,6 @@
-# Dependencies
+# Case-study source PDFs (generated WebP slides are committed)
+public/case-studies/source/*.pdf
+
 node_modules/
 
 # Next.js
