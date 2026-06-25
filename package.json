@@ -28,7 +28,8 @@
     "next": "*",
     "react": "*",
     "react-dom": "*",
-    "react-markdown": "*"
+    "react-markdown": "*",
+    "react-pdf": "^10.4.1"
   },
   "devDependencies": {
     "@types/node": "*",
