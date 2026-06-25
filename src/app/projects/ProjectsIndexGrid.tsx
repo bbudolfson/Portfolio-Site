@@ -7,6 +7,15 @@ import Link from "next/link";
 import { ProjectImage } from "../../components/ProjectImage";
 import { projectTileHoverPlaceholder, projectTiles, type ProjectTile } from "./projectTiles";
 
+function TileRole({ role }: { role: string }) {
+  return (
+    <div className="projectsTileRole">
+      <h3 className="projectsTileOverlayHeading">Role</h3>
+      <p className="projectsTileOverlayText">{role}</p>
+    </div>
+  );
+}
+
 function TileFigure({ tile, priority }: { tile: ProjectTile; priority?: boolean }) {
   const blurb = tile.hoverBlurb ?? projectTileHoverPlaceholder;
   return (
@@ -23,6 +32,7 @@ function TileFigure({ tile, priority }: { tile: ProjectTile; priority?: boolean 
       <div className="projectsTileOverlay projectsTileOverlay--desktopHover" aria-hidden="true">
         <h3 className="projectsTileOverlayHeading">Overview</h3>
         <p className="projectsTileOverlayText">{blurb}</p>
+        {tile.role ? <TileRole role={tile.role} /> : null}
         {tile.pills?.length ? (
           <ul className="projectsTileOverlayPills">
             {tile.pills.map((pill) => (
@@ -75,6 +85,12 @@ function ProjectTileModal({
         </h2>
         <h3 className="projectsTileModalSectionHeading">Overview</h3>
         <p className="projectsTileModalBody">{blurb}</p>
+        {tile.role ? (
+          <>
+            <h3 className="projectsTileModalSectionHeading">Role</h3>
+            <p className="projectsTileModalBody">{tile.role}</p>
+          </>
+        ) : null}
         {tile.pills?.length ? (
           <ul className="projectsTileModalPills">
             {tile.pills.map((pill) => (

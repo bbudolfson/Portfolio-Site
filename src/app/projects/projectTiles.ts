@@ -11,6 +11,8 @@ export type ProjectTile = {
   imageAlt: string;
   /** Shown on hover over the image area; defaults to placeholder copy. */
   hoverBlurb?: string;
+  /** Shown in hover overlay and mobile overview modal. */
+  role?: string;
   /** Column span in the 12-column project wall. */
   colSpan: 4 | 6 | 12;
   /** Force tile to start at column 1 on a new row. */
@@ -36,6 +38,7 @@ export const projectTiles: ProjectTile[] = [
     colSpan: 12,
     hoverBlurb:
       "A white-labeled portal giving freight forwarders the ability to provide their customers with shipment and order visibility, analytics, and communication across the lifecycle of a job.",
+    role: "Director & Lead Designer",
   },
   {
     id: "clockwork",
@@ -53,6 +56,7 @@ export const projectTiles: ProjectTile[] = [
     colSpan: 12,
     hoverBlurb:
       "An AI-powered email tool built for freight forwarder operations teams, reducing the overhead of customer communications and eliminating the constant back-and-forth between email and logistics software.",
+    role: "Director & Lead Designer",
   },
   {
     id: "logixboard-design-system",
@@ -64,6 +68,7 @@ export const projectTiles: ProjectTile[] = [
     colSpan: 12,
     hoverBlurb:
       "At Logixboard, I was brought in to champion the design team and elevate product consistency through a refined design system. Leveraging MUI as a foundation, I partnered with design and engineering to build a scalable system adopted across the entire product.",
+    role: "Director & Lead Designer",
   },
   {
     id: "logixboard-cx-analytics-vision",
@@ -81,6 +86,7 @@ export const projectTiles: ProjectTile[] = [
     colSpan: 12,
     hoverBlurb:
       "Defining the design direction for a full redesign of the Logixboard Customer Experience Analytics product. Inspiration was gathered and refined into two distinct directions presented to stakeholders. The final execution took a more restrained approach - steering away from gradients and glows in favor of something that felt more at home with an enterprise audience and cohesive within the broader product.",
+    role: "Director & Lead Designer",
   },
   {
     id: "bsx",
@@ -98,6 +104,7 @@ export const projectTiles: ProjectTile[] = [
     colSpan: 12,
     hoverBlurb:
       "A connected wearable and companion app for endurance athletes focused on measuring and improving VO2 Max, with guided testing protocols and a workout tracker that feeds into a desktop analytics platform.",
+    role: "Interaction Design & Research",
   },
   {
     id: "design-principles-skills-career-matrix",
@@ -115,6 +122,7 @@ export const projectTiles: ProjectTile[] = [
     colSpan: 12,
     hoverBlurb:
       "Defining guiding design principles to anchor decisions and drive alignment, assessing team strengths to understand the balance of skills and identify areas to grow or hire toward, and building a career ladder matrix to bring structure and clarity to employee growth conversations.",
+    role: "Director",
   },
   {
     id: "under-armour",
@@ -132,6 +140,7 @@ export const projectTiles: ProjectTile[] = [
     colSpan: 12,
     hoverBlurb:
       "An internal mobile tool that empowers Under Armour store associates to engage customers on the sales floor, check live inventory, and place orders in real time - without stepping away.",
+    role: "Interaction Design & Research",
   },
   {
     id: "spreadfast",

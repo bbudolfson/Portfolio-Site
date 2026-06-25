@@ -88,12 +88,7 @@ export default function ProjectsPage() {
       <h1 className="projectsIndexHeading">Sample Project Work</h1>
 
       <p className="projectsIntroLarge">
-        As an in-house SaaS designer for the past decade, much of my work is under NDA or would greatly benefit from
-        further context. I would be happy to talk through in person &mdash;{" "}
-        <a className="projectsIntroLink" href="mailto:bbudolf@gmail.com">
-          just reach out
-        </a>
-        . Below is a snapshot of the various types of projects and customers I&apos;ve worked on and collaborated with over
+        Below is a snapshot of the various types of projects and customers I&apos;ve worked on and collaborated with over
         my career.
       </p>
 

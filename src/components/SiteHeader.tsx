@@ -40,7 +40,7 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
               Case Studies
             </Link>
             <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
-              Projects
+              Samples
             </Link>
             <Link className={active === "resume" ? "topNavLink active" : "topNavLink"} href="/resume">
               Résumé
@@ -59,7 +59,7 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
                 Case Studies
               </Link>
               <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
-                Projects
+                Samples
               </Link>
               <Link className={active === "resume" ? "topNavLink active" : "topNavLink"} href="/resume">
                 Résumé
