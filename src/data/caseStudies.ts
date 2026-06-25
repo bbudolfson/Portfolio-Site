@@ -1,4 +1,5 @@
 import clockworkManifest from "../../public/case-studies/clockwork/manifest.json";
+import customsEntryManifest from "../../public/case-studies/customs-entry/manifest.json";
 
 export type CaseStudyManifest = {
   id: string;
@@ -17,7 +18,7 @@ export const caseStudyPageMeta = {
 };
 
 /** Order shown on /case-study. Add entries here as new PDFs are ready. */
-export const caseStudies: CaseStudyManifest[] = [clockworkManifest];
+export const caseStudies: CaseStudyManifest[] = [clockworkManifest, customsEntryManifest];
 
 export function slidesWithCacheBust(manifest: CaseStudyManifest) {
   const cacheVersion = manifest.generatedAt.slice(0, 10);

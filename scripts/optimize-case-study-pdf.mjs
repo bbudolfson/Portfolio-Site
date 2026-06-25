@@ -24,6 +24,13 @@ const CASE_STUDIES = [
     description:
       "An AI-powered email companion for freight forwarder operations teams, reducing inbox overhead and eliminating back-and-forth between email and logistics software.",
   },
+  {
+    id: "customs-entry",
+    pdfFile: "Customs_Entry_Case_Study_Portfolio.pdf",
+    title: "Customs Entry Case Study",
+    description:
+      "Designing workflows and interfaces for customs entry in enterprise freight and logistics software.",
+  },
 ];
 
 async function fileExists(filePath) {
