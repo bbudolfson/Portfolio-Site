@@ -1571,7 +1571,86 @@ h4.projectsQuadHeading {
   line-height: var(--text-label-line-height);
   font-weight: var(--font-body-weight-semi-bold);
   color: var(--text-primary);
-  text-align: center;
+}
+
+.caseStudyCarouselFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-200) var(--space-400);
+}
+
+.caseStudyCarouselFooterActions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-300);
+}
+
+.caseStudyCarouselTextBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-100);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--app-font-body), var(--font-body);
+  font-size: var(--text-label-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-label-line-height);
+  color: var(--color-accent2);
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+.caseStudyCarouselTextBtn:hover:not(:disabled) {
+  color: var(--red-600);
+}
+
+.caseStudyCarouselTextBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.caseStudyCarouselTextBtn:focus-visible {
+  outline: 2px solid var(--color-accent2);
+  outline-offset: 2px;
+}
+
+.caseStudyCarouselTextBtn--icon {
+  gap: var(--space-100);
+}
+
+.caseStudyCarouselFullscreenIcon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.caseStudyCarousel--fullscreen,
+.caseStudyCarousel:fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  align-content: center;
+  gap: var(--space-300);
+  padding: clamp(16px, 3vw, 28px);
+  box-sizing: border-box;
+  background: var(--surface-page);
+  overflow: auto;
+}
+
+.caseStudyCarousel--fullscreen .caseStudyCarouselImage,
+.caseStudyCarousel:fullscreen .caseStudyCarouselImage {
+  max-height: calc(100vh - 120px);
+}
+
+.caseStudyCarousel--fullscreen .caseStudyCarouselPlaceholder,
+.caseStudyCarousel:fullscreen .caseStudyCarouselPlaceholder {
+  max-height: calc(100vh - 120px);
 }
 
 .caseStudyCarouselViewport {
@@ -1619,6 +1698,11 @@ h4.projectsQuadHeading {
 }
 
 @media (max-width: 600px) {
+  .caseStudyCarouselFooter {
+    flex-direction: column;
+    gap: var(--space-200);
+  }
+
   .caseStudyCarouselStage {
     column-gap: var(--space-100);
   }

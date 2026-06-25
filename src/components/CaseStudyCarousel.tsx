@@ -30,10 +30,35 @@ function ChevronIcon({ direction }: { direction: "left" | "right" }) {
   );
 }
 
+function FullscreenIcon({ expanded }: { expanded: boolean }) {
+  return (
+    <svg
+      className="caseStudyCarouselFullscreenIcon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {expanded ? (
+        <path
+          fill="currentColor"
+          d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"
+        />
+      ) : (
+        <path
+          fill="currentColor"
+          d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+        />
+      )}
+    </svg>
+  );
+}
+
 export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
   const sectionId = useId();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "center" });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -53,6 +78,13 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
     };
   }, [emblaApi, onSelect]);
 
+  const exitFullscreen = useCallback(async () => {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen().catch(() => undefined);
+    }
+    setIsFullscreen(false);
+  }, []);
+
   useEffect(() => {
     if (!emblaApi || !isActive) return;
     const onKey = (e: KeyboardEvent) => {
@@ -62,11 +94,33 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
       } else if (e.key === "ArrowRight") {
         e.preventDefault();
         emblaApi.scrollNext();
+      } else if (e.key === "Escape" && isFullscreen) {
+        e.preventDefault();
+        void exitFullscreen();
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [emblaApi, isActive]);
+  }, [emblaApi, isActive, isFullscreen, exitFullscreen]);
+
+  useEffect(() => {
+    const onFullscreenChange = () => {
+      const root = sectionRef.current;
+      if (!root) return;
+      setIsFullscreen(document.fullscreenElement === root);
+    };
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", onFullscreenChange);
+  }, []);
+
+  useEffect(() => {
+    if (!isFullscreen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isFullscreen]);
 
   const activate = useCallback(() => setIsActive(true), []);
   const deactivate = useCallback((e: FocusEvent<HTMLDivElement>) => {
@@ -77,22 +131,47 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const scrollToStart = useCallback(() => emblaApi?.scrollTo(0), [emblaApi]);
+
+  const toggleFullscreen = useCallback(async () => {
+    const root = sectionRef.current;
+    if (!root) return;
+
+    if (isFullscreen) {
+      await exitFullscreen();
+      return;
+    }
+
+    if (root.requestFullscreen) {
+      try {
+        await root.requestFullscreen();
+        setIsFullscreen(true);
+        return;
+      } catch {
+        // Fall through to overlay mode (common on iOS).
+      }
+    }
+
+    setIsFullscreen(true);
+  }, [exitFullscreen, isFullscreen]);
 
   if (slides.length === 0) {
     return <p className="caseStudyEmpty">No slides available.</p>;
   }
 
+  const stageClassName = "caseStudyCarouselStage";
+
   return (
     <div
       ref={sectionRef}
-      className="caseStudyCarousel"
+      className={`caseStudyCarousel${isFullscreen ? " caseStudyCarousel--fullscreen" : ""}`}
       id={sectionId}
       onMouseEnter={activate}
       onMouseLeave={() => setIsActive(false)}
       onFocus={activate}
       onBlur={deactivate}
     >
-      <div className="caseStudyCarouselStage">
+      <div className={stageClassName}>
         <button
           type="button"
           className="caseStudyCarouselNav caseStudyCarouselNav--prev"
@@ -138,9 +217,31 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
         </button>
       </div>
 
-      <p className="caseStudyCarouselCounter" aria-live="polite">
-        Slide {selectedIndex + 1} of {slides.length}
-      </p>
+      <div className="caseStudyCarouselFooter">
+        <p className="caseStudyCarouselCounter" aria-live="polite">
+          Slide {selectedIndex + 1} of {slides.length}
+        </p>
+        <div className="caseStudyCarouselFooterActions">
+          <button
+            type="button"
+            className="caseStudyCarouselTextBtn"
+            onClick={scrollToStart}
+            disabled={selectedIndex === 0}
+          >
+            Reset
+          </button>
+          <button
+            type="button"
+            className="caseStudyCarouselTextBtn caseStudyCarouselTextBtn--icon"
+            onClick={() => void toggleFullscreen()}
+            aria-pressed={isFullscreen}
+            aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+          >
+            <FullscreenIcon expanded={isFullscreen} />
+            <span>{isFullscreen ? "Exit" : "Fullscreen"}</span>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
