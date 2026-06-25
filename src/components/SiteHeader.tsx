@@ -37,7 +37,7 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
               className={active === "case-study" ? "topNavLink active" : "topNavLink"}
               href="/case-study"
             >
-              Case Study
+              Case Studies
             </Link>
             <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
               Projects
@@ -56,7 +56,7 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
                 className={active === "case-study" ? "topNavLink active" : "topNavLink"}
                 href="/case-study"
               >
-                Case Study
+                Case Studies
               </Link>
               <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
                 Projects
