@@ -2,7 +2,7 @@
   "id": "customs-entry",
   "title": "Customs Entry Case Study",
   "description": "Designing workflows and interfaces for customs entry in enterprise freight and logistics software.",
-  "slideCount": 33,
+  "slideCount": 34,
   "slides": [
     {
       "src": "/case-studies/customs-entry/slide-01.webp",
@@ -135,8 +135,12 @@
     {
       "src": "/case-studies/customs-entry/slide-33.webp",
       "alt": "Customs Entry Case Study — slide 33"
+    },
+    {
+      "src": "/case-studies/customs-entry/slide-34.webp",
+      "alt": "Customs Entry Case Study — slide 34"
     }
   ],
   "pdfDownload": "/case-studies/source/Customs_Entry_Case_Study_Portfolio.pdf",
-  "generatedAt": "2026-06-25T14:53:48.170Z"
+  "generatedAt": "2026-06-25T15:29:35.555Z"
 }
