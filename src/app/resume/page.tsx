@@ -31,7 +31,7 @@ export default function ResumePage() {
         </div>
 
         <div className="resumePageToolbar">
-          <Link href={resumePath} download className="resumeDownloadLink">
+          <Link href={resumePath} download className="processPointsCta">
             Download PDF
           </Link>
         </div>

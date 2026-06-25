@@ -106,16 +106,6 @@ h4 {
   margin-top: var(--space-400);
 }
 
-.resumeDownloadLink {
-  font-size: var(--text-paragraph-medium-size);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.resumeDownloadLink:hover {
-  opacity: 0.85;
-}
-
 .resumeViewer {
   flex: 0 1 auto;
   width: 100%;
@@ -1525,13 +1515,14 @@ h4.projectsQuadHeading {
 }
 
 .caseStudyCarousel {
+  --case-study-nav-size: 44px;
   display: grid;
   gap: var(--space-300);
 }
 
 .caseStudyCarouselStage {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: var(--case-study-nav-size) minmax(0, 1fr) var(--case-study-nav-size);
   align-items: center;
   column-gap: clamp(8px, 1.5vw, 16px);
 }
@@ -1584,17 +1575,26 @@ h4.projectsQuadHeading {
 }
 
 .caseStudyCarouselFooter {
+  display: grid;
+  grid-template-columns: var(--case-study-nav-size) minmax(0, 1fr) var(--case-study-nav-size);
+  column-gap: clamp(8px, 1.5vw, 16px);
+}
+
+.caseStudyCarouselFooterInset {
+  grid-column: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: var(--space-200) var(--space-400);
 }
 
 .caseStudyCarouselFooterActions {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--space-300);
+  margin-left: auto;
 }
 
 .caseStudyCarouselTextBtn {
@@ -1708,12 +1708,25 @@ h4.projectsQuadHeading {
 }
 
 @media (max-width: 600px) {
-  .caseStudyCarouselFooter {
+  .caseStudyCarousel {
+    --case-study-nav-size: 36px;
+  }
+
+  .caseStudyCarouselFooterInset {
     flex-direction: column;
+    align-items: stretch;
     gap: var(--space-200);
   }
 
+  .caseStudyCarouselFooterActions {
+    justify-content: flex-end;
+  }
+
   .caseStudyCarouselStage {
+    column-gap: var(--space-100);
+  }
+
+  .caseStudyCarouselFooter {
     column-gap: var(--space-100);
   }
 

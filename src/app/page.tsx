@@ -14,7 +14,7 @@ const capabilities = [
   },
   {
     title: "Craft",
-    body: "Craft is what separates something that works from something people love. I care deeply about the interaction details — the flows, the states, the moments of friction that most teams deprioritize until they ship and hear about it from users. I care about the leading, the tracking, the rag. Sketching is thinking for me. I explore in low fidelity before committing, which means fewer wrong turns and more time on what matters.",
+    body: "Craft is what separates something that works from something people love. I care deeply about the interaction details: the flows, the states, and the moments of friction that most teams deprioritize until they ship and hear about it from users. I care about the leading, the tracking, the rag. Sketching is thinking for me. I explore in low fidelity before committing, which means fewer wrong turns and more time on what matters.",
     processPoints: [
       "Sketching is thinking",
       "Typography matters",
@@ -24,7 +24,7 @@ const capabilities = [
   },
   {
     title: "Systems",
-    body: "Design systems are living, and only useful if they're set up in a way that can be scaled and shared between design and development. I build the foundations — variables, tokens, components, rules — in a way that fits how people work, not just how it lives in the design software. The pace of AI requires structure to ensure consistency and polish as teams are empowered to move faster and autonomously.",
+    body: "Design systems are living, and only useful if they're set up in a way that can be scaled and shared between design and development. I build the foundations, including variables, tokens, components, and rules, in a way that fits how people work, not just how it lives in the design software. The pace of AI requires structure to ensure consistency and polish as teams are empowered to move faster and autonomously.",
     processPoints: [
       "Design token & variable systems",
       "Rule definition & documentation",
@@ -34,7 +34,7 @@ const capabilities = [
   },
   {
     title: "Leadership",
-    body: "Design doesn't happen in isolation. I work with teams on the culture and fluency that makes good design possible — through mentorship, critique culture, and design education that meets people where they are. Whether you're a founding team figuring out how design fits, or an established team looking to level up, I can help build the habits and shared language that stick.",
+    body: "Design doesn't happen in isolation. I work with teams on the culture and fluency that makes good design possible through mentorship, critique culture, and design education that meets people where they are. Whether you're a founding team figuring out how design fits, or an established team looking to level up, I can help build the habits and shared language that stick.",
     processPoints: [
       "Design mentorship",
       "Continued education",

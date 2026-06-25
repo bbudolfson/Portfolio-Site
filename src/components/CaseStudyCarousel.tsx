@@ -218,28 +218,30 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
       </div>
 
       <div className="caseStudyCarouselFooter">
-        <p className="caseStudyCarouselCounter" aria-live="polite">
-          Slide {selectedIndex + 1} of {slides.length}
-        </p>
-        <div className="caseStudyCarouselFooterActions">
-          <button
-            type="button"
-            className="caseStudyCarouselTextBtn"
-            onClick={scrollToStart}
-            disabled={selectedIndex === 0}
-          >
-            Reset
-          </button>
-          <button
-            type="button"
-            className="caseStudyCarouselTextBtn caseStudyCarouselTextBtn--icon"
-            onClick={() => void toggleFullscreen()}
-            aria-pressed={isFullscreen}
-            aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
-          >
-            <FullscreenIcon expanded={isFullscreen} />
-            <span>{isFullscreen ? "Exit" : "Fullscreen"}</span>
-          </button>
+        <div className="caseStudyCarouselFooterInset">
+          <p className="caseStudyCarouselCounter" aria-live="polite">
+            Slide {selectedIndex + 1} of {slides.length}
+          </p>
+          <div className="caseStudyCarouselFooterActions">
+            <button
+              type="button"
+              className="caseStudyCarouselTextBtn"
+              onClick={scrollToStart}
+              disabled={selectedIndex === 0}
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              className="caseStudyCarouselTextBtn caseStudyCarouselTextBtn--icon"
+              onClick={() => void toggleFullscreen()}
+              aria-pressed={isFullscreen}
+              aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+            >
+              <FullscreenIcon expanded={isFullscreen} />
+              <span>{isFullscreen ? "Exit" : "Fullscreen"}</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
