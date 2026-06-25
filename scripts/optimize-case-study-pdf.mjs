@@ -16,12 +16,13 @@ const WEBP_QUALITY = 82;
 const PDF_SCALE = 2;
 
 const CASE_STUDIES = [
+  // Principal deck paused — being split into three separate case studies.
   {
-    id: "principal",
-    pdfFile: "Brent_Budolfson_Case_Study_Portfolio.pdf",
-    title: "Logixboard Case Study",
+    id: "clockwork",
+    pdfFile: "Clockwork_Case_Study_Portfolio.pdf",
+    title: "Clockwork Case Study",
     description:
-      "A deep dive into the design lifecycle, 0-1 products, and design systems for enterprise SaaS.",
+      "An AI-powered email companion for freight forwarder operations teams, reducing inbox overhead and eliminating back-and-forth between email and logistics software.",
   },
 ];
 

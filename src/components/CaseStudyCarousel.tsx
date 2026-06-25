@@ -1,7 +1,7 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState, type FocusEvent } from "react";
 
 export type CaseStudySlide = {
   src: string;
@@ -31,6 +31,9 @@ function ChevronIcon({ direction }: { direction: "left" | "right" }) {
 }
 
 export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
+  const sectionId = useId();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isActive, setIsActive] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "center" });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -51,7 +54,7 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
   }, [emblaApi, onSelect]);
 
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!emblaApi || !isActive) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") {
         e.preventDefault();
@@ -63,7 +66,14 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [emblaApi]);
+  }, [emblaApi, isActive]);
+
+  const activate = useCallback(() => setIsActive(true), []);
+  const deactivate = useCallback((e: FocusEvent<HTMLDivElement>) => {
+    if (!sectionRef.current?.contains(e.relatedTarget as Node | null)) {
+      setIsActive(false);
+    }
+  }, []);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -73,7 +83,15 @@ export function CaseStudyCarousel({ slides }: CaseStudyCarouselProps) {
   }
 
   return (
-    <div className="caseStudyCarousel">
+    <div
+      ref={sectionRef}
+      className="caseStudyCarousel"
+      id={sectionId}
+      onMouseEnter={activate}
+      onMouseLeave={() => setIsActive(false)}
+      onFocus={activate}
+      onBlur={deactivate}
+    >
       <div className="caseStudyCarouselStage">
         <button
           type="button"

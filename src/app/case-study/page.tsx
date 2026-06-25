@@ -2,31 +2,28 @@ import type { Metadata } from "next";
 
 import { CaseStudyCarousel } from "../../components/CaseStudyCarousel";
 import { SiteHeader } from "../../components/SiteHeader";
-import principalManifest from "../../../public/case-studies/principal/manifest.json";
+import { caseStudies, caseStudyPageMeta, slidesWithCacheBust } from "../../data/caseStudies";
 
 export const metadata: Metadata = {
-  title: "Logixboard Case Study",
-  description: principalManifest.description,
+  title: caseStudyPageMeta.title,
+  description: caseStudyPageMeta.description,
 };
 
 export default function CaseStudyPage() {
-  const { title, description, slides: rawSlides, generatedAt } = principalManifest;
-  const cacheVersion = generatedAt.slice(0, 10);
-  const slides = rawSlides.map((slide) => ({
-    ...slide,
-    src: `${slide.src}?v=${cacheVersion}`,
-  }));
-
   return (
     <main className="container pageShell caseStudyPageShell">
       <SiteHeader active="case-study" />
 
       <header className="caseStudyPageHeader">
-        <h1 className="projectsIndexHeading">{title}</h1>
-        <p className="caseStudyPageIntro">{description}</p>
+        <h1 className="projectsIndexHeading">{caseStudyPageMeta.title}</h1>
+        <p className="caseStudyPageIntro">{caseStudyPageMeta.description}</p>
       </header>
 
-      <CaseStudyCarousel slides={slides} />
+      <div className="caseStudyList">
+        {caseStudies.map((study) => (
+          <CaseStudyCarousel key={study.id} slides={slidesWithCacheBust(study)} />
+        ))}
+      </div>
     </main>
   );
 }

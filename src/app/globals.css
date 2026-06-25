@@ -1509,6 +1509,11 @@ h4.projectsQuadHeading {
   color: var(--text-secondary);
 }
 
+.caseStudyList {
+  display: grid;
+  gap: clamp(48px, 6vw, 80px);
+}
+
 .caseStudyCarousel {
   display: grid;
   gap: var(--space-300);
