@@ -31,6 +31,13 @@ const CASE_STUDIES = [
     description:
       "Designing workflows and interfaces for customs entry in enterprise freight and logistics software.",
   },
+  {
+    id: "connected-objects",
+    pdfFile: "Connected_Objects_Case_Study_Portfolio.pdf",
+    title: "Connected Objects Case Study",
+    description:
+      "Designing connected product experiences across hardware, software, and enterprise IoT platforms.",
+  },
 ];
 
 async function fileExists(filePath) {
