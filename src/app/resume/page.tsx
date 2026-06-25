@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 // Bump `v` when you replace the PDF in public/ (avoids stale cached file for visitors).
 const resumePath = "/Brent_Budolfson_Resume.pdf?v=2026-06-11";
+const resumeImagePath = "/resume/resume.webp?v=2026-06-11";
 
 export default function ResumePage() {
   return (
@@ -18,14 +19,22 @@ export default function ResumePage() {
 
       <h1 className="projectsIndexHeading">Résumé</h1>
 
-      <div className="resumePageToolbar">
-        <Link href={resumePath} download className="resumeDownloadLink">
-          Download PDF
-        </Link>
-      </div>
+      <div className="resumeViewerStack">
+        <div className="resumeViewer">
+          <img
+            src={resumeImagePath}
+            alt="Brent Budolfson résumé"
+            className="resumePageImage"
+            width={1224}
+            height={1584}
+          />
+        </div>
 
-      <div className="resumeViewer">
-        <iframe title="Brent Budolfson résumé" src={resumePath} className="resumePdfFrame" />
+        <div className="resumePageToolbar">
+          <Link href={resumePath} download className="resumeDownloadLink">
+            Download PDF
+          </Link>
+        </div>
       </div>
     </main>
   );
