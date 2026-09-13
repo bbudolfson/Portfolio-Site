@@ -46,23 +46,18 @@ function TileFigure({
           role="region"
           aria-label={`${tile.label} overview`}
         >
-          <h3 className="projectsTileOverlayHeading">Overview</h3>
-          <p className="projectsTileOverlayText">{blurb}</p>
-          {tile.role ? (
-            <div className="projectsTileRole">
-              <h3 className="projectsTileOverlayHeading">Role</h3>
-              <p className="projectsTileOverlayText">{tile.role}</p>
-            </div>
-          ) : null}
-          {tile.pills?.length ? (
-            <ul className="projectsTileOverlayPills">
-              {tile.pills.map((pill) => (
-                <li key={pill} className="projectsTileOverlayPill">
-                  {pill}
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          <div className="projectsTileOverlayContent">
+            <h3 className="projectsTileOverlayHeading">Overview</h3>
+            <p className="projectsTileOverlayText">{blurb}</p>
+            {tile.role ? (
+              <div className="projectsTileRole">
+                <h3 className="projectsTileOverlayHeading">Role</h3>
+                <ul className="projectsTileOverlayPills">
+                  <li className="projectsTileOverlayPill">{tile.role}</li>
+                </ul>
+              </div>
+            ) : null}
+          </div>
         </div>
       ) : null}
     </div>
