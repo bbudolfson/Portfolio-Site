@@ -9,9 +9,8 @@ export type ProjectTile = {
   pills?: string[];
   imageSrc: string;
   imageAlt: string;
-  /** Shown on hover over the image area; defaults to placeholder copy. */
+  /** Shown in the overview overlay; defaults to placeholder copy. */
   hoverBlurb?: string;
-  /** Shown in hover overlay and mobile overview modal. */
   role?: string;
   /** Column span in the 12-column project wall. */
   colSpan: 4 | 6 | 12;
