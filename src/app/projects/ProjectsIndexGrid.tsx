@@ -75,8 +75,22 @@ export function ProjectsIndexGrid() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeOverview();
     };
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target;
+      if (!(target instanceof Element)) {
+        closeOverview();
+        return;
+      }
+      // Overview buttons handle their own open/close/switch.
+      if (target.closest(".projectsTileOverviewBtn")) return;
+      closeOverview();
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onPointerDown);
+    };
   }, [openTileId, closeOverview]);
 
   return (
