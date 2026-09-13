@@ -666,6 +666,7 @@ h2.capabilityTitle {
   align-items: flex-end;
   justify-content: flex-end;
   padding: clamp(16px, 2.4vw, 28px);
+  padding-bottom: 48px;
   background: rgba(12, 12, 14, 0.88);
   box-sizing: border-box;
   overflow: auto;
