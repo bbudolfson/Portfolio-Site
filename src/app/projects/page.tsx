@@ -87,11 +87,6 @@ export default function ProjectsPage() {
 
       <h1 className="projectsIndexHeading">Sample Project Work</h1>
 
-      <p className="projectsIntroLarge">
-        Below is a snapshot of the various types of projects and customers I&apos;ve worked on and collaborated with over
-        my career.
-      </p>
-
       <ProjectsIndexGrid />
 
       <div className="projectsWorkSamplesBleed surfacePrimaryFullBleed">

@@ -7,7 +7,8 @@ export type ProjectTile = {
   href: string | null;
   label: string;
   pills?: string[];
-  imageSrc: string;
+  /** Required unless `comingSoon` is set. */
+  imageSrc?: string;
   imageAlt: string;
   /** Shown in the overview overlay; defaults to placeholder copy. */
   hoverBlurb?: string;
@@ -18,9 +19,22 @@ export type ProjectTile = {
   startAtColumnOne?: boolean;
   /** Crop: image extends past the bottom of the tile (overflow hidden). */
   imageBleedBottom?: boolean;
+  /** Renders a "Coming soon" placeholder in place of an image. */
+  comingSoon?: boolean;
 };
 
 export const projectTiles: ProjectTile[] = [
+  {
+    id: "cookie-finance-brand-refresh",
+    href: null,
+    label: "Cookie Finance Brand Refresh",
+    imageAlt: "Cookie Finance Brand Refresh — coming soon.",
+    colSpan: 12,
+    comingSoon: true,
+    hoverBlurb:
+      "Refreshing the product alongside the brand and marketing materials for a unified customer experience.",
+    role: "Director & Lead Designer",
+  },
   {
     id: "logixboard-customer-experience-portal",
     href: null,

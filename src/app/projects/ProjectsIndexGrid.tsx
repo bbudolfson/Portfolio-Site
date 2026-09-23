@@ -1,26 +1,16 @@
-"use client";
-
-import { useCallback, useEffect, useId, useState } from "react";
 import Link from "next/link";
 
 import { ProjectImage } from "../../components/ProjectImage";
 import { projectTileHoverPlaceholder, projectTiles, type ProjectTile } from "./projectTiles";
 
-function TileFigure({
-  tile,
-  priority,
-  overviewOpen,
-  overviewId,
-}: {
-  tile: ProjectTile;
-  priority?: boolean;
-  overviewOpen: boolean;
-  overviewId: string;
-}) {
-  const blurb = tile.hoverBlurb ?? projectTileHoverPlaceholder;
-  const image = (
+function TileFigure({ tile, priority }: { tile: ProjectTile; priority?: boolean }) {
+  const image = tile.comingSoon ? (
+    <div className="projectsTileComingSoon" role="img" aria-label={tile.imageAlt}>
+      <span className="projectsTileComingSoonText">Coming soon</span>
+    </div>
+  ) : (
     <ProjectImage
-      src={tile.imageSrc}
+      src={tile.imageSrc ?? ""}
       alt={tile.imageAlt}
       className="projectsTileImage"
       loading={priority ? "eager" : "lazy"}
@@ -33,66 +23,17 @@ function TileFigure({
       className={`projectsTileFigure projectsTileFigure--image${tile.imageBleedBottom ? " projectsTileFigure--imageBleedBottom" : ""}`}
     >
       {tile.href ? (
-        <Link href={tile.href} className="projectsTileLink projectsTileImageLink" tabIndex={overviewOpen ? -1 : undefined}>
+        <Link href={tile.href} className="projectsTileLink projectsTileImageLink">
           {image}
         </Link>
       ) : (
         <div className="projectsTileStatic projectsTileImageLink">{image}</div>
       )}
-      {overviewOpen ? (
-        <div
-          id={overviewId}
-          className="projectsTileOverlay"
-          role="region"
-          aria-label={`${tile.label} overview`}
-        >
-          <div className="projectsTileOverlayContent">
-            <h3 className="projectsTileOverlayHeading">Overview</h3>
-            <p className="projectsTileOverlayText">{blurb}</p>
-            {tile.role ? (
-              <div className="projectsTileRole">
-                <h3 className="projectsTileOverlayHeading">Role</h3>
-                <ul className="projectsTileOverlayPills">
-                  <li className="projectsTileOverlayPill">{tile.role}</li>
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      ) : null}
     </div>
   );
 }
 
 export function ProjectsIndexGrid() {
-  const [openTileId, setOpenTileId] = useState<string | null>(null);
-  const baseId = useId();
-
-  const closeOverview = useCallback(() => setOpenTileId(null), []);
-
-  useEffect(() => {
-    if (!openTileId) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeOverview();
-    };
-    const onPointerDown = (e: PointerEvent) => {
-      const target = e.target;
-      if (!(target instanceof Element)) {
-        closeOverview();
-        return;
-      }
-      // Overview buttons handle their own open/close/switch.
-      if (target.closest(".projectsTileOverviewBtn")) return;
-      closeOverview();
-    };
-    window.addEventListener("keydown", onKey);
-    document.addEventListener("pointerdown", onPointerDown);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.removeEventListener("pointerdown", onPointerDown);
-    };
-  }, [openTileId, closeOverview]);
-
   return (
     <ul className="projectsIndexGrid">
       {projectTiles.map((tile, index) => {
@@ -103,19 +44,13 @@ export function ProjectsIndexGrid() {
               ? " projectsIndexTile--span6"
               : " projectsIndexTile--span4";
         const tileClassName = `projectsIndexTile${spanClass}${tile.startAtColumnOne ? " projectsIndexTile--start1" : ""}${tile.id === "i-mutualmobile" ? " projectsIndexTile--mutualmobile" : ""}`;
-        const overviewId = `${baseId}-${tile.id}-overview`;
-        const overviewOpen = openTileId === tile.id;
+        const blurb = tile.hoverBlurb ?? projectTileHoverPlaceholder;
         const label = <span className="projectsTileLabel">{tile.label}</span>;
 
         return (
           <li key={tile.id} className={tileClassName}>
             <div className="projectsTileCardShell">
-              <TileFigure
-                tile={tile}
-                priority={index === 0}
-                overviewOpen={overviewOpen}
-                overviewId={overviewId}
-              />
+              <TileFigure tile={tile} priority={index === 0} />
               <div className="projectsTileMeta">
                 {tile.href ? (
                   <Link href={tile.href} className="projectsTileLabelLink">
@@ -124,15 +59,12 @@ export function ProjectsIndexGrid() {
                 ) : (
                   label
                 )}
-                <button
-                  type="button"
-                  className="projectsTileOverviewBtn"
-                  onClick={() => setOpenTileId(overviewOpen ? null : tile.id)}
-                  aria-expanded={overviewOpen}
-                  aria-controls={overviewId}
-                >
-                  Overview
-                </button>
+                <p className="projectsTileOverviewText">{blurb}</p>
+                {tile.role ? (
+                  <ul className="projectsTileOverviewPills">
+                    <li className="projectsTileOverviewPill">{tile.role}</li>
+                  </ul>
+                ) : null}
               </div>
             </div>
           </li>
