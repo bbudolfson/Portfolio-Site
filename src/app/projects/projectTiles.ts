@@ -72,18 +72,6 @@ export const projectTiles: ProjectTile[] = [
     role: "Director & Lead Designer",
   },
   {
-    id: "logixboard-design-system",
-    href: null,
-    label: "Logixboard Design System",
-    pills: ["Design systems", "Design leadership"],
-    imageSrc: "/images/projects/logixboard-design-system.png?v=8",
-    imageAlt: "Logixboard Design System.",
-    colSpan: 12,
-    hoverBlurb:
-      "At Logixboard, I was brought in to champion the design team and elevate product consistency through a refined design system. Leveraging MUI as a foundation, I partnered with design and engineering to build a scalable system adopted across the entire product.",
-    role: "Director & Lead Designer",
-  },
-  {
     id: "logixboard-cx-analytics-vision",
     href: null,
     label: "Logixboard Customer Experience Analytics Design Vision",
@@ -102,22 +90,16 @@ export const projectTiles: ProjectTile[] = [
     role: "Director & Lead Designer",
   },
   {
-    id: "bsx",
+    id: "logixboard-design-system",
     href: null,
-    label: "BSX Endurance Tracker",
-    pills: [
-      "Wearable UX",
-      "Hardware + Software",
-      "Data Visualization",
-      "User Testing",
-      "New Product Launch",
-    ],
-    imageSrc: "/images/projects/bsx-pair.png?v=3",
-    imageAlt: "BSX Endurance Tracker.",
+    label: "Logixboard Design System",
+    pills: ["Design systems", "Design leadership"],
+    imageSrc: "/images/projects/logixboard-design-system.png?v=8",
+    imageAlt: "Logixboard Design System.",
     colSpan: 12,
     hoverBlurb:
-      "A connected wearable and companion app for endurance athletes focused on measuring and improving VO2 Max, with guided testing protocols and a workout tracker that feeds into a desktop analytics platform.",
-    role: "Interaction Design & Research",
+      "At Logixboard, I was brought in to champion the design team and elevate product consistency through a refined design system. Leveraging MUI as a foundation, I partnered with design and engineering to build a scalable system adopted across the entire product.",
+    role: "Director & Lead Designer",
   },
   {
     id: "design-principles-skills-career-matrix",
@@ -136,6 +118,24 @@ export const projectTiles: ProjectTile[] = [
     hoverBlurb:
       "Defining guiding design principles to anchor decisions and drive alignment, assessing team strengths to understand the balance of skills and identify areas to grow or hire toward, and building a career ladder matrix to bring structure and clarity to employee growth conversations.",
     role: "Director",
+  },
+  {
+    id: "bsx",
+    href: null,
+    label: "BSX Endurance Tracker",
+    pills: [
+      "Wearable UX",
+      "Hardware + Software",
+      "Data Visualization",
+      "User Testing",
+      "New Product Launch",
+    ],
+    imageSrc: "/images/projects/bsx-pair.png?v=3",
+    imageAlt: "BSX Endurance Tracker.",
+    colSpan: 12,
+    hoverBlurb:
+      "A connected wearable and companion app for endurance athletes focused on measuring and improving VO2 Max, with guided testing protocols and a workout tracker that feeds into a desktop analytics platform.",
+    role: "Interaction Design & Research",
   },
   {
     id: "under-armour",
