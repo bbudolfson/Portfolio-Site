@@ -85,8 +85,6 @@ export default function ProjectsPage() {
     <main className="container pageShell">
       <SiteHeader active="projects" />
 
-      <h1 className="projectsIndexHeading">Sample Project Work</h1>
-
       <ProjectsIndexGrid />
 
       <div className="projectsWorkSamplesBleed surfacePrimaryFullBleed">

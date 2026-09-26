@@ -13,8 +13,10 @@ export type ProjectTile = {
   /** Shown in the overview overlay; defaults to placeholder copy. */
   hoverBlurb?: string;
   role?: string;
+  /** Renders a compact color card (no image) with the description inside it. */
+  tileColor?: string;
   /** Column span in the 12-column project wall. */
-  colSpan: 4 | 6 | 12;
+  colSpan: 3 | 4 | 6 | 12;
   /** Force tile to start at column 1 on a new row. */
   startAtColumnOne?: boolean;
   /** Crop: image extends past the bottom of the tile (overflow hidden). */
@@ -123,16 +125,9 @@ export const projectTiles: ProjectTile[] = [
     id: "bsx",
     href: null,
     label: "BSX Endurance Tracker",
-    pills: [
-      "Wearable UX",
-      "Hardware + Software",
-      "Data Visualization",
-      "User Testing",
-      "New Product Launch",
-    ],
-    imageSrc: "/images/projects/bsx-pair.png?v=3",
     imageAlt: "BSX Endurance Tracker.",
-    colSpan: 12,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
       "A connected wearable and companion app for endurance athletes focused on measuring and improving VO2 Max, with guided testing protocols and a workout tracker that feeds into a desktop analytics platform.",
     role: "Interaction Design & Research",
@@ -140,17 +135,10 @@ export const projectTiles: ProjectTile[] = [
   {
     id: "under-armour",
     href: null,
-    label: "Under Armour Sales Associate Application",
-    pills: [
-      "Internal Tooling",
-      "Mobile Design",
-      "Retail UX",
-      "Real-Time Systems",
-      "Stakeholder Collaboration",
-    ],
-    imageSrc: "/images/projects/under-armour.png?v=5",
+    label: "UA Sales App",
     imageAlt: "Under Armour Sales Associate Application.",
-    colSpan: 12,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
       "An internal mobile tool that empowers Under Armour store associates to engage customers on the sales floor, check live inventory, and place orders in real time - without stepping away.",
     role: "Interaction Design & Research",
@@ -159,16 +147,9 @@ export const projectTiles: ProjectTile[] = [
     id: "spreadfast",
     href: null,
     label: "Spredfast Analytics Dashboard",
-    pills: [
-      "Data Visualization",
-      "Dashboard Design",
-      "Enterprise UX",
-      "Design Systems",
-      "Social Media",
-    ],
-    imageSrc: "/images/projects/spreadfast-analytics.png?v=4",
     imageAlt: "Spredfast Analytics Dashboard.",
-    colSpan: 6,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
       "An enterprise reporting tool for social media marketers to track, measure, and analyze campaign performance across multiple social channels from a single dashboard.",
   },
@@ -176,50 +157,29 @@ export const projectTiles: ProjectTile[] = [
     id: "beam",
     href: null,
     label: "Beam Connect Home App",
-    pills: [
-      "Mobile Design",
-      "IoT UX",
-      "Information Architecture",
-      "Cross-Platform Design",
-      "New Product Launch",
-    ],
-    imageSrc: "/images/projects/beam.png?v=2",
     imageAlt: "Beam Connect Home App.",
-    colSpan: 6,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
       "A mobile app built at the dawn of the connected home movement, giving users one place to control a wide range of smart devices - lights, outlets, and thermostats - regardless of manufacturer.",
   },
   {
     id: "general-motors",
     href: null,
-    label: "General Motors Augmented Reality Manual",
-    pills: [
-      "AR/XR",
-      "Emerging Tech",
-      "Prototyping",
-      "User Research",
-      "New Product Launch",
-    ],
-    imageSrc: "/images/projects/general-motors.png?v=5",
+    label: "GM AR Manual",
     imageAlt: "General Motors Augmented Reality Manual.",
-    colSpan: 12,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
-      "An early-stage AR concept that uses the phone's camera to overlay step-by-step instructions for routine vehicle maintenance tasks like jumping a battery or changing a tire.",
+      "A General Motors Augmented Reality concept that uses the phone's camera to overlay step-by-step instructions for routine vehicle maintenance tasks like jumping a battery or changing a tire.",
   },
   {
     id: "cigna",
     href: null,
     label: "Cigna Insurance Mobile Wallet",
-    pills: [
-      "Mobile Design",
-      "Healthcare UX",
-      "Information Architecture",
-      "Design Systems",
-      "User Research",
-    ],
-    imageSrc: "/images/projects/cigna-dashboard.png?v=3",
     imageAlt: "Cigna Insurance Mobile Wallet.",
-    colSpan: 6,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
       "An all-in-one insurance app that helps members stay on top of deductibles, manage their HSA, access digital insurance cards, and find in-network providers - all from their phone.",
   },
@@ -227,35 +187,20 @@ export const projectTiles: ProjectTile[] = [
     id: "scotts",
     href: null,
     label: "Scotts Mobile Gardening Guide",
-    pills: [
-      "Mobile Design",
-      "Content Strategy",
-      "User Research",
-      "Personalization",
-      "Marketing UX",
-    ],
-    imageSrc: "/images/projects/scotts-gallery.png?v=3",
     imageAlt: "Scotts Mobile Gardening Guide.",
-    colSpan: 6,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
       "A marketing initiative from Scotts designed to bring younger audiences into gardening through personalized how-to content and themed garden ideas tailored to the user's growing location.",
   },
   {
     id: "i-mutualmobile",
     href: null,
-    label: "Mutual Mobile Internal Allocation Tool",
-    pills: [
-      "Internal Tooling",
-      "Enterprise UX",
-      "Information Architecture",
-      "Stakeholder Collaboration",
-      "New Product Launch",
-    ],
-    imageSrc: "/images/projects/i-mutualmobile-final.png",
+    label: "MM Allocation App",
     imageAlt: "Mutual Mobile Internal Allocation Tool.",
-    colSpan: 12,
-    startAtColumnOne: true,
+    colSpan: 3,
+    tileColor: "var(--neutral-400)",
     hoverBlurb:
-      "An internal resource and budget management tool built for digital agencies, bringing visibility and control to project-by-project planning, employee allocation, and budget tracking.",
+      "An internal resource and budget management tool built at Mutual Mobile, bringing visibility and control to project-by-project planning, employee allocation, and budget tracking.",
   },
 ];

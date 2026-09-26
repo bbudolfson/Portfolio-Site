@@ -33,43 +33,73 @@ function TileFigure({ tile, priority }: { tile: ProjectTile; priority?: boolean 
   );
 }
 
-export function ProjectsIndexGrid() {
-  return (
-    <ul className="projectsIndexGrid">
-      {projectTiles.map((tile, index) => {
-        const spanClass =
-          tile.colSpan === 12
-            ? " projectsIndexTile--span12"
-            : tile.colSpan === 6
-              ? " projectsIndexTile--span6"
-              : " projectsIndexTile--span4";
-        const tileClassName = `projectsIndexTile${spanClass}${tile.startAtColumnOne ? " projectsIndexTile--start1" : ""}${tile.id === "i-mutualmobile" ? " projectsIndexTile--mutualmobile" : ""}`;
-        const blurb = tile.hoverBlurb ?? projectTileHoverPlaceholder;
-        const label = <span className="projectsTileLabel">{tile.label}</span>;
+function spanClassFor(tile: ProjectTile) {
+  return tile.colSpan === 12
+    ? " projectsIndexTile--span12"
+    : tile.colSpan === 6
+      ? " projectsIndexTile--span6"
+      : tile.colSpan === 4
+        ? " projectsIndexTile--span4"
+        : " projectsIndexTile--span3";
+}
 
-        return (
-          <li key={tile.id} className={tileClassName}>
-            <div className="projectsTileCardShell">
-              <TileFigure tile={tile} priority={index === 0} />
-              <div className="projectsTileMeta">
-                {tile.href ? (
-                  <Link href={tile.href} className="projectsTileLabelLink">
-                    {label}
-                  </Link>
-                ) : (
-                  label
-                )}
-                <p className="projectsTileOverviewText">{blurb}</p>
-                {tile.role ? (
-                  <ul className="projectsTileOverviewPills">
-                    <li className="projectsTileOverviewPill">{tile.role}</li>
-                  </ul>
-                ) : null}
+export function ProjectsIndexGrid() {
+  const mainTiles = projectTiles.filter((tile) => !tile.tileColor);
+  const otherTiles = projectTiles.filter((tile) => tile.tileColor);
+
+  return (
+    <>
+      <ul className="projectsIndexGrid">
+        {mainTiles.map((tile, index) => {
+          const tileClassName = `projectsIndexTile${spanClassFor(tile)}${tile.startAtColumnOne ? " projectsIndexTile--start1" : ""}`;
+          const blurb = tile.hoverBlurb ?? projectTileHoverPlaceholder;
+          const label = <span className="projectsTileLabel">{tile.label}</span>;
+
+          return (
+            <li key={tile.id} className={tileClassName}>
+              <div className="projectsTileCardShell">
+                <TileFigure tile={tile} priority={index === 0} />
+                <div className="projectsTileMeta">
+                  {tile.href ? (
+                    <Link href={tile.href} className="projectsTileLabelLink">
+                      {label}
+                    </Link>
+                  ) : (
+                    label
+                  )}
+                  <p className="projectsTileOverviewText">{blurb}</p>
+                  {tile.role ? (
+                    <ul className="projectsTileOverviewPills">
+                      <li className="projectsTileOverviewPill">{tile.role}</li>
+                    </ul>
+                  ) : null}
+                </div>
               </div>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
+            </li>
+          );
+        })}
+      </ul>
+
+      {otherTiles.length > 0 ? (
+        <div className="projectsOtherSection">
+          <h2 className="projectsOtherHeading">Other Projects</h2>
+          <ul className="projectsOtherGrid">
+            {otherTiles.map((tile) => {
+              const tileClassName = `projectsIndexTile${spanClassFor(tile)}`;
+              const blurb = tile.hoverBlurb ?? projectTileHoverPlaceholder;
+
+              return (
+                <li key={tile.id} className={tileClassName}>
+                  <div className="projectsColorTile" style={{ backgroundColor: tile.tileColor }}>
+                    <span className="projectsTileLabel">{tile.label}</span>
+                    <p className="projectsTileOverviewText">{blurb}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ) : null}
+    </>
   );
 }

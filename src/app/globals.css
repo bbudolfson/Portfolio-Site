@@ -556,6 +556,24 @@ h2.capabilityTitle {
   min-width: 0;
 }
 
+.projectsOtherSection {
+  margin: 0 0 clamp(40px, 5vw, 72px);
+}
+
+.projectsOtherHeading {
+  margin: 0 0 var(--space-500);
+}
+
+.projectsOtherGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 24px;
+}
+
 .projectsIndexTile--span6 {
   grid-column: span 6;
 }
@@ -564,16 +582,16 @@ h2.capabilityTitle {
   grid-column: span 4;
 }
 
+.projectsIndexTile--span3 {
+  grid-column: span 3;
+}
+
 .projectsIndexTile--span12 {
   grid-column: span 12;
 }
 
 .projectsIndexTile--start1 {
   grid-column-start: 1;
-}
-
-.projectsIndexTile--mutualmobile {
-  grid-column: 1 / -1;
 }
 
 .projectsTileLink,
@@ -648,6 +666,23 @@ h2.capabilityTitle {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.projectsColorTile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--space-100);
+  width: 100%;
+  min-height: 240px;
+  padding: var(--space-500);
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.projectsColorTile .projectsTileOverviewText {
+  color: var(--text-primary);
+  max-width: none;
 }
 
 .projectsTileComingSoon {
@@ -755,23 +790,22 @@ h2.capabilityTitle {
 }
 
 @media (max-width: 520px) {
-  .projectsIndexGrid {
+  .projectsIndexGrid,
+  .projectsOtherGrid {
     grid-template-columns: 1fr;
   }
 
+  .projectsIndexTile--span3,
   .projectsIndexTile--span4,
   .projectsIndexTile--span6,
   .projectsIndexTile--span12 {
     grid-column: span 1;
   }
-
-  .projectsIndexTile--mutualmobile {
-    grid-column: 1 / -1;
-  }
 }
 
-@media (max-width: 900px) {
-  .projectsIndexGrid {
+@media (min-width: 521px) and (max-width: 900px) {
+  .projectsIndexGrid,
+  .projectsOtherGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -781,8 +815,8 @@ h2.capabilityTitle {
     grid-column: span 2;
   }
 
-  .projectsIndexTile--mutualmobile {
-    grid-column: 1 / -1;
+  .projectsIndexTile--span3 {
+    grid-column: span 1;
   }
 }
 
