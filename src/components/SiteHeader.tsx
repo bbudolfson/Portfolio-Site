@@ -33,14 +33,14 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
             <Link className={active === "profile" ? "topNavLink active" : "topNavLink"} href="/">
               Profile
             </Link>
+            <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
+              Samples
+            </Link>
             <Link
               className={active === "case-study" ? "topNavLink active" : "topNavLink"}
               href="/case-study"
             >
               Case Studies
-            </Link>
-            <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
-              Samples
             </Link>
             <Link className={active === "resume" ? "topNavLink active" : "topNavLink"} href="/resume">
               Résumé
@@ -52,14 +52,14 @@ export function SiteHeader({ active }: { active: ActiveNav }) {
               <Link className={active === "profile" ? "topNavLink active" : "topNavLink"} href="/">
                 Profile
               </Link>
+              <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
+                Samples
+              </Link>
               <Link
                 className={active === "case-study" ? "topNavLink active" : "topNavLink"}
                 href="/case-study"
               >
                 Case Studies
-              </Link>
-              <Link className={active === "projects" ? "topNavLink active" : "topNavLink"} href="/projects">
-                Samples
               </Link>
               <Link className={active === "resume" ? "topNavLink active" : "topNavLink"} href="/resume">
                 Résumé
